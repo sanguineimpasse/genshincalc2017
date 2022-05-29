@@ -31,11 +31,6 @@ Public Class Form1
     End Sub
     'Form_Load
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'Database1DataSet1.Table' table. You can move, or remove it, as needed.
-        Me.TableTableAdapter1.Fill(Me.Database1DataSet1.Table)
-        'TODO: This line of code loads data into the 'Database1DataSet.Table' table. You can move, or remove it, as needed.
-        Me.TableTableAdapter.Fill(Me.Database1DataSet.Table)
-
         Call InitializeLists()
         Call PlayBackgroundMusic()
     End Sub
@@ -45,7 +40,7 @@ Public Class Form1
     End Sub
     'Music Sub
     Sub PlayBackgroundMusic()
-        My.Computer.Audio.Play("C:\Users\Gene Feliciano\source\repos\Midterm Lab Exam\Splash Screen Solution\Yu Peng Chen - Reminisence-notloud.wav", AudioPlayMode.BackgroundLoop)
+        'My.Computer.Audio.Play("Yu Peng Chen - Reminisence-notloud.wav", AudioPlayMode.BackgroundLoop)
     End Sub
     'This sub allows us to create a mute button
     Private Sub chkMuteMusic_CheckedChanged(sender As Object, e As EventArgs) Handles chkMuteMusic.CheckedChanged

@@ -433,7 +433,7 @@ Partial Class Form1
         Me.grpCharStats.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.grpCharStats.Location = New System.Drawing.Point(290, 28)
         Me.grpCharStats.Name = "grpCharStats"
-        Me.grpCharStats.Size = New System.Drawing.Size(1189, 615)
+        Me.grpCharStats.Size = New System.Drawing.Size(1173, 615)
         Me.grpCharStats.TabIndex = 3
         Me.grpCharStats.TabStop = False
         Me.grpCharStats.Text = "Edit Character Stats"
@@ -596,9 +596,10 @@ Partial Class Form1
         '
         'picCharacter
         '
-        Me.picCharacter.Location = New System.Drawing.Point(306, 54)
+        Me.picCharacter.Location = New System.Drawing.Point(320, 65)
         Me.picCharacter.Name = "picCharacter"
-        Me.picCharacter.Size = New System.Drawing.Size(425, 576)
+        Me.picCharacter.Size = New System.Drawing.Size(392, 558)
+        Me.picCharacter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picCharacter.TabIndex = 13
         Me.picCharacter.TabStop = False
         '
@@ -816,6 +817,7 @@ Partial Class Form1
         Me.picWeapon.Location = New System.Drawing.Point(15, 27)
         Me.picWeapon.Name = "picWeapon"
         Me.picWeapon.Size = New System.Drawing.Size(425, 576)
+        Me.picWeapon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picWeapon.TabIndex = 14
         Me.picWeapon.TabStop = False
         '
@@ -829,6 +831,7 @@ Partial Class Form1
         Me.grpPresetBuilds.TabIndex = 4
         Me.grpPresetBuilds.TabStop = False
         Me.grpPresetBuilds.Text = "Preset Builds"
+        Me.grpPresetBuilds.Visible = False
         '
         'lstPresetList
         '
@@ -870,6 +873,7 @@ Partial Class Form1
         Me.lblPresetCreator.Size = New System.Drawing.Size(191, 34)
         Me.lblPresetCreator.TabIndex = 10
         Me.lblPresetCreator.Text = "By User: SanguinImpasse " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "UID: 801356573"
+        Me.lblPresetCreator.Visible = False
         '
         'grpPreviewStats
         '
@@ -882,7 +886,7 @@ Partial Class Form1
         Me.grpPreviewStats.Controls.Add(Me.grpPSBaseStats)
         Me.grpPreviewStats.Location = New System.Drawing.Point(290, 28)
         Me.grpPreviewStats.Name = "grpPreviewStats"
-        Me.grpPreviewStats.Size = New System.Drawing.Size(1189, 615)
+        Me.grpPreviewStats.Size = New System.Drawing.Size(1179, 615)
         Me.grpPreviewStats.TabIndex = 14
         Me.grpPreviewStats.TabStop = False
         Me.grpPreviewStats.Text = "Preview Stats"
@@ -960,34 +964,36 @@ Partial Class Form1
         '
         'lblEnergyRecharge
         '
-        Me.lblEnergyRecharge.Location = New System.Drawing.Point(235, 151)
+        Me.lblEnergyRecharge.Location = New System.Drawing.Point(169, 151)
         Me.lblEnergyRecharge.Name = "lblEnergyRecharge"
-        Me.lblEnergyRecharge.Size = New System.Drawing.Size(59, 19)
+        Me.lblEnergyRecharge.Size = New System.Drawing.Size(125, 17)
         Me.lblEnergyRecharge.TabIndex = 10
         Me.lblEnergyRecharge.Text = "dbl_er"
+        Me.lblEnergyRecharge.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'lblIncomingHeal
         '
-        Me.lblIncomingHeal.Location = New System.Drawing.Point(212, 122)
+        Me.lblIncomingHeal.Location = New System.Drawing.Point(213, 122)
         Me.lblIncomingHeal.Name = "lblIncomingHeal"
-        Me.lblIncomingHeal.Size = New System.Drawing.Size(88, 19)
+        Me.lblIncomingHeal.Size = New System.Drawing.Size(81, 24)
         Me.lblIncomingHeal.TabIndex = 9
         Me.lblIncomingHeal.Text = "dbl_inhealbonus"
+        Me.lblIncomingHeal.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'lblHealBonus
         '
-        Me.lblHealBonus.Location = New System.Drawing.Point(174, 93)
+        Me.lblHealBonus.Location = New System.Drawing.Point(137, 93)
         Me.lblHealBonus.Name = "lblHealBonus"
-        Me.lblHealBonus.Size = New System.Drawing.Size(120, 19)
+        Me.lblHealBonus.Size = New System.Drawing.Size(157, 25)
         Me.lblHealBonus.TabIndex = 8
         Me.lblHealBonus.Text = "dbl_healbonus"
         Me.lblHealBonus.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'lblCritDmg
         '
-        Me.lblCritDmg.Location = New System.Drawing.Point(190, 63)
+        Me.lblCritDmg.Location = New System.Drawing.Point(137, 63)
         Me.lblCritDmg.Name = "lblCritDmg"
-        Me.lblCritDmg.Size = New System.Drawing.Size(104, 19)
+        Me.lblCritDmg.Size = New System.Drawing.Size(157, 19)
         Me.lblCritDmg.TabIndex = 7
         Me.lblCritDmg.Text = "dbl_critdmg"
         Me.lblCritDmg.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -1457,14 +1463,14 @@ Partial Class Form1
         Me.grpArtifactStats.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.grpArtifactStats.Location = New System.Drawing.Point(290, 28)
         Me.grpArtifactStats.Name = "grpArtifactStats"
-        Me.grpArtifactStats.Size = New System.Drawing.Size(1189, 615)
+        Me.grpArtifactStats.Size = New System.Drawing.Size(1179, 615)
         Me.grpArtifactStats.TabIndex = 15
         Me.grpArtifactStats.TabStop = False
         Me.grpArtifactStats.Text = "Edit Artifact Stats"
         '
         'btnClearArtifacts
         '
-        Me.btnClearArtifacts.Location = New System.Drawing.Point(41, 429)
+        Me.btnClearArtifacts.Location = New System.Drawing.Point(36, 429)
         Me.btnClearArtifacts.Name = "btnClearArtifacts"
         Me.btnClearArtifacts.Size = New System.Drawing.Size(327, 36)
         Me.btnClearArtifacts.TabIndex = 21
@@ -1475,7 +1481,7 @@ Partial Class Form1
         '
         Me.lstArtifactBonuses.FormattingEnabled = True
         Me.lstArtifactBonuses.ItemHeight = 20
-        Me.lstArtifactBonuses.Location = New System.Drawing.Point(41, 361)
+        Me.lstArtifactBonuses.Location = New System.Drawing.Point(36, 361)
         Me.lstArtifactBonuses.Name = "lstArtifactBonuses"
         Me.lstArtifactBonuses.Size = New System.Drawing.Size(327, 44)
         Me.lstArtifactBonuses.TabIndex = 20
@@ -1483,7 +1489,7 @@ Partial Class Form1
         'Label81
         '
         Me.Label81.AutoSize = True
-        Me.Label81.Location = New System.Drawing.Point(38, 336)
+        Me.Label81.Location = New System.Drawing.Point(33, 336)
         Me.Label81.Name = "Label81"
         Me.Label81.Size = New System.Drawing.Size(144, 20)
         Me.Label81.TabIndex = 19
@@ -1502,7 +1508,7 @@ Partial Class Form1
         Me.grpFlower.Controls.Add(Me.cmbFlowerSubstat3Name)
         Me.grpFlower.Controls.Add(Me.cmbFlowerSubstat1Name)
         Me.grpFlower.Controls.Add(Me.cmbFlowerSet)
-        Me.grpFlower.Location = New System.Drawing.Point(55, 45)
+        Me.grpFlower.Location = New System.Drawing.Point(50, 45)
         Me.grpFlower.Name = "grpFlower"
         Me.grpFlower.Size = New System.Drawing.Size(299, 216)
         Me.grpFlower.TabIndex = 18
@@ -1607,7 +1613,7 @@ Partial Class Form1
         Me.grpSands.Controls.Add(Me.cmbSandsSubstat3Name)
         Me.grpSands.Controls.Add(Me.cmbSandsSubstat1Name)
         Me.grpSands.Controls.Add(Me.cmbSandsSet)
-        Me.grpSands.Location = New System.Drawing.Point(852, 45)
+        Me.grpSands.Location = New System.Drawing.Point(768, 45)
         Me.grpSands.Name = "grpSands"
         Me.grpSands.Size = New System.Drawing.Size(299, 216)
         Me.grpSands.TabIndex = 18
@@ -1710,7 +1716,7 @@ Partial Class Form1
         Me.grpGoblet.Controls.Add(Me.cmbGobletSubstat3Name)
         Me.grpGoblet.Controls.Add(Me.cmbGobletSubstat1Name)
         Me.grpGoblet.Controls.Add(Me.cmbGobletSet)
-        Me.grpGoblet.Location = New System.Drawing.Point(506, 342)
+        Me.grpGoblet.Location = New System.Drawing.Point(422, 342)
         Me.grpGoblet.Name = "grpGoblet"
         Me.grpGoblet.Size = New System.Drawing.Size(299, 216)
         Me.grpGoblet.TabIndex = 18
@@ -1813,7 +1819,7 @@ Partial Class Form1
         Me.grpCirclet.Controls.Add(Me.cmbCircletSubstat3Name)
         Me.grpCirclet.Controls.Add(Me.cmbCircletSubstat1Name)
         Me.grpCirclet.Controls.Add(Me.cmbCircletSet)
-        Me.grpCirclet.Location = New System.Drawing.Point(852, 342)
+        Me.grpCirclet.Location = New System.Drawing.Point(768, 342)
         Me.grpCirclet.Name = "grpCirclet"
         Me.grpCirclet.Size = New System.Drawing.Size(299, 216)
         Me.grpCirclet.TabIndex = 18
@@ -1916,7 +1922,7 @@ Partial Class Form1
         Me.grpPlume.Controls.Add(Me.cmbPlumeSubstat3Name)
         Me.grpPlume.Controls.Add(Me.cmbPlumeSubstat1Name)
         Me.grpPlume.Controls.Add(Me.cmbPlumeSet)
-        Me.grpPlume.Location = New System.Drawing.Point(506, 45)
+        Me.grpPlume.Location = New System.Drawing.Point(422, 45)
         Me.grpPlume.Name = "grpPlume"
         Me.grpPlume.Size = New System.Drawing.Size(299, 216)
         Me.grpPlume.TabIndex = 2
@@ -2013,7 +2019,7 @@ Partial Class Form1
         Me.grpDatabase.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.grpDatabase.Location = New System.Drawing.Point(290, 28)
         Me.grpDatabase.Name = "grpDatabase"
-        Me.grpDatabase.Size = New System.Drawing.Size(1189, 615)
+        Me.grpDatabase.Size = New System.Drawing.Size(1173, 615)
         Me.grpDatabase.TabIndex = 16
         Me.grpDatabase.TabStop = False
         Me.grpDatabase.Text = "Personal Info"
@@ -2253,7 +2259,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1497, 681)
+        Me.ClientSize = New System.Drawing.Size(1497, 674)
         Me.Controls.Add(Me.picKagurasVerity)
         Me.Controls.Add(Me.picPrimordialJWS)
         Me.Controls.Add(Me.picWolfsGravestone)
@@ -2282,12 +2288,12 @@ Partial Class Form1
         Me.Controls.Add(Me.chkDisplayPresets)
         Me.Controls.Add(Me.grpPresetBuilds)
         Me.Controls.Add(Me.grpModeSelector)
+        Me.Controls.Add(Me.picCharacter)
+        Me.Controls.Add(Me.grpPreviewStats)
+        Me.Controls.Add(Me.grpCharStats)
         Me.Controls.Add(Me.grpDatabase)
         Me.Controls.Add(Me.grpArtifactStats)
         Me.Controls.Add(Me.grpWeaponStats)
-        Me.Controls.Add(Me.grpPreviewStats)
-        Me.Controls.Add(Me.grpCharStats)
-        Me.Controls.Add(Me.picCharacter)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Genshin Stats Calculator"
