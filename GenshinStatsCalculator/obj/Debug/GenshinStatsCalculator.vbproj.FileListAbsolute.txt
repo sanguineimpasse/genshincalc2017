@@ -1,0 +1,14 @@
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\bin\Debug\Database1.mdf
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\bin\Debug\Database1_log.ldf
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\bin\Debug\GenshinStatsCalculator.exe.config
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\bin\Debug\GenshinStatsCalculator.exe
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\bin\Debug\GenshinStatsCalculator.pdb
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\bin\Debug\GenshinStatsCalculator.xml
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.vbprojAssemblyReference.cache
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.Form1.resources
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.Resources.resources
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.vbproj.GenerateResource.cache
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.vbproj.CoreCompileInputs.cache
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.exe
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.xml
+C:\Users\Gene Feliciano\source\repos\GenshinStatsCalculatorSolution\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.pdb
