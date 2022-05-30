@@ -24,14 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.Database1DataSet1 = New GenshinStatsCalculator.Database1DataSet1()
-        Me.TableBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TableTableAdapter1 = New GenshinStatsCalculator.Database1DataSet1TableAdapters.TableTableAdapter()
-        Me.TableAdapterManager1 = New GenshinStatsCalculator.Database1DataSet1TableAdapters.TableAdapterManager()
         Me.TableDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpModeSelector = New System.Windows.Forms.GroupBox()
         Me.radDatabase = New System.Windows.Forms.RadioButton()
         Me.radPreviewStats = New System.Windows.Forms.RadioButton()
@@ -236,8 +229,13 @@ Partial Class Form1
         Me.picWolfsGravestone = New System.Windows.Forms.PictureBox()
         Me.picPrimordialJWS = New System.Windows.Forms.PictureBox()
         Me.picKagurasVerity = New System.Windows.Forms.PictureBox()
-        CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TableBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Database1DataSet1 = New GenshinStatsCalculator.Database1DataSet1()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TableTableAdapter1 = New GenshinStatsCalculator.Database1DataSet1TableAdapters.TableTableAdapter()
+        Me.TableAdapterManager1 = New GenshinStatsCalculator.Database1DataSet1TableAdapters.TableAdapterManager()
         CType(Me.TableDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpModeSelector.SuspendLayout()
         Me.grpCharStats.SuspendLayout()
@@ -283,27 +281,9 @@ Partial Class Form1
         CType(Me.picWolfsGravestone, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picPrimordialJWS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picKagurasVerity, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TableBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Database1DataSet1
-        '
-        Me.Database1DataSet1.DataSetName = "Database1DataSet1"
-        Me.Database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TableBindingSource1
-        '
-        Me.TableBindingSource1.DataMember = "Table"
-        Me.TableBindingSource1.DataSource = Me.Database1DataSet1
-        '
-        'TableTableAdapter1
-        '
-        Me.TableTableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.TableTableAdapter = Me.TableTableAdapter1
-        Me.TableAdapterManager1.UpdateOrder = GenshinStatsCalculator.Database1DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'TableDataGridView
         '
@@ -318,24 +298,6 @@ Partial Class Form1
         Me.TableDataGridView.RowTemplate.Height = 24
         Me.TableDataGridView.Size = New System.Drawing.Size(600, 531)
         Me.TableDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "UID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "UID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Genshin Main"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Genshin Main"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Email Address "
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Email Address "
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
         'grpModeSelector
         '
@@ -500,7 +462,7 @@ Partial Class Form1
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(896, 328)
+        Me.Label2.Location = New System.Drawing.Point(897, 349)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(50, 19)
         Me.Label2.TabIndex = 8
@@ -524,7 +486,7 @@ Partial Class Form1
         Me.lstLevel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lstLevel.FormattingEnabled = True
         Me.lstLevel.ItemHeight = 20
-        Me.lstLevel.Location = New System.Drawing.Point(899, 353)
+        Me.lstLevel.Location = New System.Drawing.Point(898, 371)
         Me.lstLevel.Name = "lstLevel"
         Me.lstLevel.Size = New System.Drawing.Size(244, 224)
         Me.lstLevel.TabIndex = 7
@@ -971,6 +933,7 @@ Partial Class Form1
         '
         'grpPSAdvancedStats
         '
+        Me.grpPSAdvancedStats.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(146, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.grpPSAdvancedStats.Controls.Add(Me.lblShieldStrength)
         Me.grpPSAdvancedStats.Controls.Add(Me.lblEnergyRecharge)
         Me.grpPSAdvancedStats.Controls.Add(Me.lblIncomingHeal)
@@ -1103,6 +1066,7 @@ Partial Class Form1
         '
         'grpElementalStats
         '
+        Me.grpElementalStats.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(146, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.grpElementalStats.Controls.Add(Me.lblPhysicalRes)
         Me.grpElementalStats.Controls.Add(Me.lblPhysicalDmgBonus)
         Me.grpElementalStats.Controls.Add(Me.lblGeoRes)
@@ -1225,7 +1189,7 @@ Partial Class Form1
         '
         Me.lblElectroDmgBonus.Location = New System.Drawing.Point(170, 130)
         Me.lblElectroDmgBonus.Name = "lblElectroDmgBonus"
-        Me.lblElectroDmgBonus.Size = New System.Drawing.Size(186, 19)
+        Me.lblElectroDmgBonus.Size = New System.Drawing.Size(186, 25)
         Me.lblElectroDmgBonus.TabIndex = 18
         Me.lblElectroDmgBonus.Text = "dbl_ElectroDmgBonus"
         Me.lblElectroDmgBonus.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -1269,7 +1233,7 @@ Partial Class Form1
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(6, 360)
+        Me.Label45.Location = New System.Drawing.Point(10, 360)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(107, 19)
         Me.Label45.TabIndex = 13
@@ -1278,7 +1242,7 @@ Partial Class Form1
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(6, 333)
+        Me.Label44.Location = New System.Drawing.Point(10, 333)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(166, 19)
         Me.Label44.TabIndex = 12
@@ -1287,7 +1251,7 @@ Partial Class Form1
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(6, 305)
+        Me.Label43.Location = New System.Drawing.Point(10, 305)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(73, 19)
         Me.Label43.TabIndex = 11
@@ -1296,7 +1260,7 @@ Partial Class Form1
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(6, 279)
+        Me.Label42.Location = New System.Drawing.Point(10, 279)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(132, 19)
         Me.Label42.TabIndex = 10
@@ -1305,7 +1269,7 @@ Partial Class Form1
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(6, 253)
+        Me.Label41.Location = New System.Drawing.Point(10, 253)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(80, 19)
         Me.Label41.TabIndex = 9
@@ -1314,7 +1278,7 @@ Partial Class Form1
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(6, 227)
+        Me.Label40.Location = New System.Drawing.Point(10, 227)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(139, 19)
         Me.Label40.TabIndex = 8
@@ -1323,7 +1287,7 @@ Partial Class Form1
         'Label39
         '
         Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(6, 203)
+        Me.Label39.Location = New System.Drawing.Point(10, 203)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(95, 19)
         Me.Label39.TabIndex = 7
@@ -1332,7 +1296,7 @@ Partial Class Form1
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(6, 179)
+        Me.Label38.Location = New System.Drawing.Point(10, 179)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(154, 19)
         Me.Label38.TabIndex = 6
@@ -1341,7 +1305,7 @@ Partial Class Form1
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(6, 155)
+        Me.Label37.Location = New System.Drawing.Point(10, 155)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(100, 19)
         Me.Label37.TabIndex = 5
@@ -1350,7 +1314,7 @@ Partial Class Form1
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(6, 130)
+        Me.Label36.Location = New System.Drawing.Point(10, 130)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(159, 19)
         Me.Label36.TabIndex = 4
@@ -1359,7 +1323,7 @@ Partial Class Form1
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(6, 106)
+        Me.Label35.Location = New System.Drawing.Point(10, 106)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(91, 19)
         Me.Label35.TabIndex = 3
@@ -1368,7 +1332,7 @@ Partial Class Form1
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(6, 82)
+        Me.Label34.Location = New System.Drawing.Point(10, 82)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(150, 19)
         Me.Label34.TabIndex = 2
@@ -1377,7 +1341,7 @@ Partial Class Form1
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(6, 58)
+        Me.Label33.Location = New System.Drawing.Point(10, 58)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(79, 19)
         Me.Label33.TabIndex = 1
@@ -1386,7 +1350,7 @@ Partial Class Form1
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(6, 34)
+        Me.Label32.Location = New System.Drawing.Point(10, 34)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(138, 19)
         Me.Label32.TabIndex = 0
@@ -1394,6 +1358,7 @@ Partial Class Form1
         '
         'grpPSBaseStats
         '
+        Me.grpPSBaseStats.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(146, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.grpPSBaseStats.Controls.Add(Me.lblEm)
         Me.grpPSBaseStats.Controls.Add(Me.lblDef)
         Me.grpPSBaseStats.Controls.Add(Me.lblAtk)
@@ -2425,6 +2390,44 @@ Partial Class Form1
         Me.picKagurasVerity.TabIndex = 40
         Me.picKagurasVerity.TabStop = False
         '
+        'TableBindingSource1
+        '
+        Me.TableBindingSource1.DataMember = "Table"
+        Me.TableBindingSource1.DataSource = Me.Database1DataSet1
+        '
+        'Database1DataSet1
+        '
+        Me.Database1DataSet1.DataSetName = "Database1DataSet1"
+        Me.Database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "UID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "UID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Genshin Main"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Genshin Main"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Email Address "
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Email Address "
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'TableTableAdapter1
+        '
+        Me.TableTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.TableTableAdapter = Me.TableTableAdapter1
+        Me.TableAdapterManager1.UpdateOrder = GenshinStatsCalculator.Database1DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -2460,16 +2463,14 @@ Partial Class Form1
         Me.Controls.Add(Me.chkDisplayPresets)
         Me.Controls.Add(Me.grpPresetBuilds)
         Me.Controls.Add(Me.grpModeSelector)
-        Me.Controls.Add(Me.grpDatabase)
         Me.Controls.Add(Me.grpPreviewStats)
         Me.Controls.Add(Me.grpCharStats)
         Me.Controls.Add(Me.grpArtifactStats)
         Me.Controls.Add(Me.grpWeaponStats)
+        Me.Controls.Add(Me.grpDatabase)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Genshin Stats Calculator"
-        CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TableBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TableDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpModeSelector.ResumeLayout(False)
         Me.grpModeSelector.PerformLayout()
@@ -2531,6 +2532,8 @@ Partial Class Form1
         CType(Me.picWolfsGravestone, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picPrimordialJWS, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picKagurasVerity, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TableBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
