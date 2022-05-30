@@ -23,8 +23,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TableDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -289,10 +289,10 @@ Partial Class Form1
         '
         'TableDataGridView
         '
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White
-        Me.TableDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        Me.TableDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.TableDataGridView.AutoGenerateColumns = False
         Me.TableDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.TableDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlDark
@@ -301,10 +301,10 @@ Partial Class Form1
         Me.TableDataGridView.DataSource = Me.TableBindingSource1
         Me.TableDataGridView.Location = New System.Drawing.Point(515, 41)
         Me.TableDataGridView.Name = "TableDataGridView"
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
-        Me.TableDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        Me.TableDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.TableDataGridView.RowTemplate.Height = 24
         Me.TableDataGridView.Size = New System.Drawing.Size(600, 531)
         Me.TableDataGridView.TabIndex = 1
