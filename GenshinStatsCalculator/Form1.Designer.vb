@@ -142,6 +142,9 @@ Partial Class Form1
         Me.lstArtifactBonuses = New System.Windows.Forms.ListBox()
         Me.Label81 = New System.Windows.Forms.Label()
         Me.grpFlower = New System.Windows.Forms.GroupBox()
+        Me.cmbFlowerSubstat4Name = New System.Windows.Forms.ComboBox()
+        Me.cmbFlowerSubstat3Name = New System.Windows.Forms.ComboBox()
+        Me.cmbFlowerSubstat2Name = New System.Windows.Forms.ComboBox()
         Me.FlowerHP = New System.Windows.Forms.Label()
         Me.txtFlowerHP = New System.Windows.Forms.TextBox()
         Me.txtFlowerSubstat4Value = New System.Windows.Forms.TextBox()
@@ -151,6 +154,7 @@ Partial Class Form1
         Me.cmbFlowerSubstat1Name = New System.Windows.Forms.ComboBox()
         Me.cmbFlowerSet = New System.Windows.Forms.ComboBox()
         Me.grpSands = New System.Windows.Forms.GroupBox()
+        Me.cmbSandsSet = New System.Windows.Forms.ComboBox()
         Me.cmbSandsMainStatName = New System.Windows.Forms.ComboBox()
         Me.txtSandsMainStatValue = New System.Windows.Forms.TextBox()
         Me.txtSandsSubstat4Value = New System.Windows.Forms.TextBox()
@@ -162,6 +166,7 @@ Partial Class Form1
         Me.cmbSandsSubstat3Name = New System.Windows.Forms.ComboBox()
         Me.cmbSandsSubstat1Name = New System.Windows.Forms.ComboBox()
         Me.grpGoblet = New System.Windows.Forms.GroupBox()
+        Me.cmbGobletSet = New System.Windows.Forms.ComboBox()
         Me.cmbGobletMainStatName = New System.Windows.Forms.ComboBox()
         Me.txtGobletMainStatValue = New System.Windows.Forms.TextBox()
         Me.txtGobletSubstat4Value = New System.Windows.Forms.TextBox()
@@ -173,6 +178,7 @@ Partial Class Form1
         Me.cmbGobletSubstat3Name = New System.Windows.Forms.ComboBox()
         Me.cmbGobletSubstat1Name = New System.Windows.Forms.ComboBox()
         Me.grpCirclet = New System.Windows.Forms.GroupBox()
+        Me.cmbCircletSet = New System.Windows.Forms.ComboBox()
         Me.cmbCircletMainStatName = New System.Windows.Forms.ComboBox()
         Me.txtCircletMainStatValue = New System.Windows.Forms.TextBox()
         Me.txtCircletSubstat4Value = New System.Windows.Forms.TextBox()
@@ -184,16 +190,13 @@ Partial Class Form1
         Me.cmbCircletSubstat3Name = New System.Windows.Forms.ComboBox()
         Me.cmbCircletSubstat1Name = New System.Windows.Forms.ComboBox()
         Me.grpPlume = New System.Windows.Forms.GroupBox()
+        Me.cmbPlumeSet = New System.Windows.Forms.ComboBox()
         Me.Label79 = New System.Windows.Forms.Label()
         Me.txtPlumeATK = New System.Windows.Forms.TextBox()
         Me.txtPlumeSubstat4Value = New System.Windows.Forms.TextBox()
         Me.txtPlumeSubstat3Value = New System.Windows.Forms.TextBox()
         Me.txtPlumeSubstat2Value = New System.Windows.Forms.TextBox()
         Me.txtPlumeSubstat1Value = New System.Windows.Forms.TextBox()
-        Me.cmbPlumeSubstat2Name = New System.Windows.Forms.ComboBox()
-        Me.cmbPlumeSubstat4Name = New System.Windows.Forms.ComboBox()
-        Me.cmbPlumeSubstat3Name = New System.Windows.Forms.ComboBox()
-        Me.cmbPlumeSubstat1Name = New System.Windows.Forms.ComboBox()
         Me.grpDatabase = New System.Windows.Forms.GroupBox()
         Me.btnPrevious = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
@@ -231,13 +234,10 @@ Partial Class Form1
         Me.picKagurasVerity = New System.Windows.Forms.PictureBox()
         Me.TableTableAdapter1 = New GenshinStatsCalculator.Database1DataSet1TableAdapters.TableTableAdapter()
         Me.TableAdapterManager1 = New GenshinStatsCalculator.Database1DataSet1TableAdapters.TableAdapterManager()
-        Me.cmbPlumeSet = New System.Windows.Forms.ComboBox()
-        Me.cmbSandsSet = New System.Windows.Forms.ComboBox()
-        Me.cmbGobletSet = New System.Windows.Forms.ComboBox()
-        Me.cmbCircletSet = New System.Windows.Forms.ComboBox()
-        Me.cmbFlowerSubstat2Name = New System.Windows.Forms.ComboBox()
-        Me.cmbFlowerSubstat3Name = New System.Windows.Forms.ComboBox()
-        Me.cmbFlowerSubstat4Name = New System.Windows.Forms.ComboBox()
+        Me.cmbPlumeSubstat1Name = New System.Windows.Forms.ComboBox()
+        Me.cmbPlumeSubstat2Name = New System.Windows.Forms.ComboBox()
+        Me.cmbPlumeSubstat3Name = New System.Windows.Forms.ComboBox()
+        Me.cmbPlumeSubstat4Name = New System.Windows.Forms.ComboBox()
         CType(Me.TableDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TableBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -633,6 +633,8 @@ Partial Class Form1
         'grpWeaponStats
         '
         Me.grpWeaponStats.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(146, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.grpWeaponStats.BackgroundImage = CType(resources.GetObject("grpWeaponStats.BackgroundImage"), System.Drawing.Image)
+        Me.grpWeaponStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.grpWeaponStats.Controls.Add(Me.grpRefineBonuses)
         Me.grpWeaponStats.Controls.Add(Me.grpWeaponStatmini)
         Me.grpWeaponStats.Controls.Add(Me.lstWeaponRefinement)
@@ -648,6 +650,7 @@ Partial Class Form1
         Me.grpWeaponStats.Controls.Add(Me.lblWeaponName)
         Me.grpWeaponStats.Controls.Add(Me.picWeapon)
         Me.grpWeaponStats.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.grpWeaponStats.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.grpWeaponStats.Location = New System.Drawing.Point(290, 28)
         Me.grpWeaponStats.Name = "grpWeaponStats"
         Me.grpWeaponStats.Size = New System.Drawing.Size(1179, 615)
@@ -659,6 +662,7 @@ Partial Class Form1
         '
         Me.grpRefineBonuses.Controls.Add(Me.lblRefineBonus)
         Me.grpRefineBonuses.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.grpRefineBonuses.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.grpRefineBonuses.Location = New System.Drawing.Point(464, 493)
         Me.grpRefineBonuses.Name = "grpRefineBonuses"
         Me.grpRefineBonuses.Size = New System.Drawing.Size(373, 98)
@@ -669,7 +673,7 @@ Partial Class Form1
         'lblRefineBonus
         '
         Me.lblRefineBonus.Font = New System.Drawing.Font("SDK_JP_Web", 10.2!)
-        Me.lblRefineBonus.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblRefineBonus.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.lblRefineBonus.Location = New System.Drawing.Point(16, 31)
         Me.lblRefineBonus.Name = "lblRefineBonus"
         Me.lblRefineBonus.Size = New System.Drawing.Size(335, 48)
@@ -683,6 +687,7 @@ Partial Class Form1
         Me.grpWeaponStatmini.Controls.Add(Me.lblWeaponSubStatName)
         Me.grpWeaponStatmini.Controls.Add(Me.lblWeaponMainStatName)
         Me.grpWeaponStatmini.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.grpWeaponStatmini.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.grpWeaponStatmini.Location = New System.Drawing.Point(464, 369)
         Me.grpWeaponStatmini.Name = "grpWeaponStatmini"
         Me.grpWeaponStatmini.Size = New System.Drawing.Size(373, 112)
@@ -732,7 +737,9 @@ Partial Class Form1
         '
         'lstWeaponRefinement
         '
+        Me.lstWeaponRefinement.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(146, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.lstWeaponRefinement.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.lstWeaponRefinement.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.lstWeaponRefinement.FormattingEnabled = True
         Me.lstWeaponRefinement.ItemHeight = 20
         Me.lstWeaponRefinement.Location = New System.Drawing.Point(1033, 379)
@@ -742,7 +749,9 @@ Partial Class Form1
         '
         'lstWeaponLevel
         '
+        Me.lstWeaponLevel.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(146, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.lstWeaponLevel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.lstWeaponLevel.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.lstWeaponLevel.FormattingEnabled = True
         Me.lstWeaponLevel.ItemHeight = 20
         Me.lstWeaponLevel.Location = New System.Drawing.Point(898, 379)
@@ -752,7 +761,9 @@ Partial Class Form1
         '
         'lstWeapons
         '
+        Me.lstWeapons.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(146, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.lstWeapons.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.lstWeapons.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.lstWeapons.FormattingEnabled = True
         Me.lstWeapons.ItemHeight = 20
         Me.lstWeapons.Location = New System.Drawing.Point(898, 70)
@@ -763,37 +774,45 @@ Partial Class Form1
         'Label73
         '
         Me.Label73.AutoSize = True
-        Me.Label73.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label73.BackColor = System.Drawing.Color.Transparent
+        Me.Label73.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label73.Location = New System.Drawing.Point(1030, 356)
         Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(85, 20)
+        Me.Label73.Size = New System.Drawing.Size(101, 19)
         Me.Label73.TabIndex = 22
         Me.Label73.Text = "Refinement"
         '
         'Label72
         '
         Me.Label72.AutoSize = True
-        Me.Label72.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label72.BackColor = System.Drawing.Color.Transparent
+        Me.Label72.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label72.Location = New System.Drawing.Point(897, 356)
         Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(43, 20)
+        Me.Label72.Size = New System.Drawing.Size(50, 19)
         Me.Label72.TabIndex = 21
         Me.Label72.Text = "Level"
         '
         'Label71
         '
         Me.Label71.AutoSize = True
-        Me.Label71.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label71.BackColor = System.Drawing.Color.Transparent
+        Me.Label71.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label71.Location = New System.Drawing.Point(897, 50)
         Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(70, 20)
+        Me.Label71.Size = New System.Drawing.Size(80, 19)
         Me.Label71.TabIndex = 20
         Me.Label71.Text = "Weapons"
         '
         'lblWeapRefine
         '
         Me.lblWeapRefine.AutoSize = True
+        Me.lblWeapRefine.BackColor = System.Drawing.Color.Transparent
         Me.lblWeapRefine.Font = New System.Drawing.Font("SDK_JP_Web", 12.0!)
+        Me.lblWeapRefine.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.lblWeapRefine.Location = New System.Drawing.Point(597, 168)
         Me.lblWeapRefine.Name = "lblWeapRefine"
         Me.lblWeapRefine.Size = New System.Drawing.Size(168, 24)
@@ -803,7 +822,9 @@ Partial Class Form1
         'Label69
         '
         Me.Label69.AutoSize = True
+        Me.Label69.BackColor = System.Drawing.Color.Transparent
         Me.Label69.Font = New System.Drawing.Font("SDK_JP_Web", 12.0!)
+        Me.Label69.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label69.Location = New System.Drawing.Point(460, 168)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(131, 24)
@@ -813,7 +834,9 @@ Partial Class Form1
         'lblWeaponLevel
         '
         Me.lblWeaponLevel.AutoSize = True
+        Me.lblWeaponLevel.BackColor = System.Drawing.Color.Transparent
         Me.lblWeaponLevel.Font = New System.Drawing.Font("SDK_JP_Web", 12.0!)
+        Me.lblWeaponLevel.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.lblWeaponLevel.Location = New System.Drawing.Point(531, 135)
         Me.lblWeaponLevel.Name = "lblWeaponLevel"
         Me.lblWeaponLevel.Size = New System.Drawing.Size(101, 24)
@@ -823,7 +846,9 @@ Partial Class Form1
         'Label67
         '
         Me.Label67.AutoSize = True
+        Me.Label67.BackColor = System.Drawing.Color.Transparent
         Me.Label67.Font = New System.Drawing.Font("SDK_JP_Web", 12.0!)
+        Me.Label67.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label67.Location = New System.Drawing.Point(460, 135)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(65, 24)
@@ -833,7 +858,9 @@ Partial Class Form1
         'lblWeaponName
         '
         Me.lblWeaponName.AutoSize = True
+        Me.lblWeaponName.BackColor = System.Drawing.Color.Transparent
         Me.lblWeaponName.Font = New System.Drawing.Font("SDK_JP_Web", 18.0!)
+        Me.lblWeaponName.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.lblWeaponName.Location = New System.Drawing.Point(455, 89)
         Me.lblWeaponName.Name = "lblWeaponName"
         Me.lblWeaponName.Size = New System.Drawing.Size(242, 36)
@@ -842,6 +869,7 @@ Partial Class Form1
         '
         'picWeapon
         '
+        Me.picWeapon.BackColor = System.Drawing.Color.Transparent
         Me.picWeapon.Location = New System.Drawing.Point(15, 27)
         Me.picWeapon.Name = "picWeapon"
         Me.picWeapon.Size = New System.Drawing.Size(425, 576)
@@ -1175,7 +1203,7 @@ Partial Class Form1
         '
         'lblGeoDmgBonus
         '
-        Me.lblGeoDmgBonus.Location = New System.Drawing.Point(200, 281)
+        Me.lblGeoDmgBonus.Location = New System.Drawing.Point(192, 279)
         Me.lblGeoDmgBonus.Name = "lblGeoDmgBonus"
         Me.lblGeoDmgBonus.Size = New System.Drawing.Size(162, 17)
         Me.lblGeoDmgBonus.TabIndex = 24
@@ -1541,6 +1569,7 @@ Partial Class Form1
         'Label81
         '
         Me.Label81.AutoSize = True
+        Me.Label81.ForeColor = System.Drawing.Color.Black
         Me.Label81.Location = New System.Drawing.Point(33, 336)
         Me.Label81.Name = "Label81"
         Me.Label81.Size = New System.Drawing.Size(144, 20)
@@ -1567,6 +1596,33 @@ Partial Class Form1
         Me.grpFlower.TabStop = False
         Me.grpFlower.Text = "Flower of Life (*5)"
         '
+        'cmbFlowerSubstat4Name
+        '
+        Me.cmbFlowerSubstat4Name.FormattingEnabled = True
+        Me.cmbFlowerSubstat4Name.Items.AddRange(New Object() {"HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Elemental Mastery", "Energy Recharge"})
+        Me.cmbFlowerSubstat4Name.Location = New System.Drawing.Point(6, 180)
+        Me.cmbFlowerSubstat4Name.Name = "cmbFlowerSubstat4Name"
+        Me.cmbFlowerSubstat4Name.Size = New System.Drawing.Size(193, 28)
+        Me.cmbFlowerSubstat4Name.TabIndex = 20
+        '
+        'cmbFlowerSubstat3Name
+        '
+        Me.cmbFlowerSubstat3Name.FormattingEnabled = True
+        Me.cmbFlowerSubstat3Name.Items.AddRange(New Object() {"HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Elemental Mastery", "Energy Recharge"})
+        Me.cmbFlowerSubstat3Name.Location = New System.Drawing.Point(6, 150)
+        Me.cmbFlowerSubstat3Name.Name = "cmbFlowerSubstat3Name"
+        Me.cmbFlowerSubstat3Name.Size = New System.Drawing.Size(193, 28)
+        Me.cmbFlowerSubstat3Name.TabIndex = 19
+        '
+        'cmbFlowerSubstat2Name
+        '
+        Me.cmbFlowerSubstat2Name.FormattingEnabled = True
+        Me.cmbFlowerSubstat2Name.Items.AddRange(New Object() {"HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Elemental Mastery", "Energy Recharge"})
+        Me.cmbFlowerSubstat2Name.Location = New System.Drawing.Point(6, 120)
+        Me.cmbFlowerSubstat2Name.Name = "cmbFlowerSubstat2Name"
+        Me.cmbFlowerSubstat2Name.Size = New System.Drawing.Size(193, 28)
+        Me.cmbFlowerSubstat2Name.TabIndex = 18
+        '
         'FlowerHP
         '
         Me.FlowerHP.AutoSize = True
@@ -1580,6 +1636,7 @@ Partial Class Form1
         'txtFlowerHP
         '
         Me.txtFlowerHP.Location = New System.Drawing.Point(205, 61)
+        Me.txtFlowerHP.MaxLength = 5
         Me.txtFlowerHP.Name = "txtFlowerHP"
         Me.txtFlowerHP.Size = New System.Drawing.Size(88, 27)
         Me.txtFlowerHP.TabIndex = 17
@@ -1587,6 +1644,7 @@ Partial Class Form1
         'txtFlowerSubstat4Value
         '
         Me.txtFlowerSubstat4Value.Location = New System.Drawing.Point(205, 180)
+        Me.txtFlowerSubstat4Value.MaxLength = 4
         Me.txtFlowerSubstat4Value.Name = "txtFlowerSubstat4Value"
         Me.txtFlowerSubstat4Value.Size = New System.Drawing.Size(88, 27)
         Me.txtFlowerSubstat4Value.TabIndex = 16
@@ -1594,6 +1652,7 @@ Partial Class Form1
         'txtFlowerSubstat3Value
         '
         Me.txtFlowerSubstat3Value.Location = New System.Drawing.Point(205, 150)
+        Me.txtFlowerSubstat3Value.MaxLength = 4
         Me.txtFlowerSubstat3Value.Name = "txtFlowerSubstat3Value"
         Me.txtFlowerSubstat3Value.Size = New System.Drawing.Size(88, 27)
         Me.txtFlowerSubstat3Value.TabIndex = 15
@@ -1601,6 +1660,7 @@ Partial Class Form1
         'txtFlowerSubstat2Value
         '
         Me.txtFlowerSubstat2Value.Location = New System.Drawing.Point(205, 120)
+        Me.txtFlowerSubstat2Value.MaxLength = 4
         Me.txtFlowerSubstat2Value.Name = "txtFlowerSubstat2Value"
         Me.txtFlowerSubstat2Value.Size = New System.Drawing.Size(88, 27)
         Me.txtFlowerSubstat2Value.TabIndex = 14
@@ -1608,6 +1668,7 @@ Partial Class Form1
         'txtFlowerSubstat1Value
         '
         Me.txtFlowerSubstat1Value.Location = New System.Drawing.Point(205, 90)
+        Me.txtFlowerSubstat1Value.MaxLength = 4
         Me.txtFlowerSubstat1Value.Name = "txtFlowerSubstat1Value"
         Me.txtFlowerSubstat1Value.Size = New System.Drawing.Size(88, 27)
         Me.txtFlowerSubstat1Value.TabIndex = 11
@@ -1651,6 +1712,16 @@ Partial Class Form1
         Me.grpSands.TabStop = False
         Me.grpSands.Text = "Sands of Eon (*5)"
         '
+        'cmbSandsSet
+        '
+        Me.cmbSandsSet.FormattingEnabled = True
+        Me.cmbSandsSet.Items.AddRange(New Object() {"Archaic Petra", "Crimson Witch of Flames", "Emblem of Severed Fates", "Gladiator's Finale", "Shimenawa's Reminiscence", "Wanderer's Troupe", "Blizzard Strayer", "Bloodstained Chivalry"})
+        Me.cmbSandsSet.Location = New System.Drawing.Point(6, 23)
+        Me.cmbSandsSet.Name = "cmbSandsSet"
+        Me.cmbSandsSet.Size = New System.Drawing.Size(287, 28)
+        Me.cmbSandsSet.TabIndex = 19
+        Me.cmbSandsSet.Text = "  "
+        '
         'cmbSandsMainStatName
         '
         Me.cmbSandsMainStatName.FormattingEnabled = True
@@ -1663,6 +1734,7 @@ Partial Class Form1
         'txtSandsMainStatValue
         '
         Me.txtSandsMainStatValue.Location = New System.Drawing.Point(205, 61)
+        Me.txtSandsMainStatValue.MaxLength = 5
         Me.txtSandsMainStatValue.Name = "txtSandsMainStatValue"
         Me.txtSandsMainStatValue.Size = New System.Drawing.Size(88, 27)
         Me.txtSandsMainStatValue.TabIndex = 17
@@ -1670,6 +1742,7 @@ Partial Class Form1
         'txtSandsSubstat4Value
         '
         Me.txtSandsSubstat4Value.Location = New System.Drawing.Point(205, 180)
+        Me.txtSandsSubstat4Value.MaxLength = 4
         Me.txtSandsSubstat4Value.Name = "txtSandsSubstat4Value"
         Me.txtSandsSubstat4Value.Size = New System.Drawing.Size(88, 27)
         Me.txtSandsSubstat4Value.TabIndex = 16
@@ -1677,6 +1750,7 @@ Partial Class Form1
         'txtSandsSubstat3Value
         '
         Me.txtSandsSubstat3Value.Location = New System.Drawing.Point(205, 150)
+        Me.txtSandsSubstat3Value.MaxLength = 4
         Me.txtSandsSubstat3Value.Name = "txtSandsSubstat3Value"
         Me.txtSandsSubstat3Value.Size = New System.Drawing.Size(88, 27)
         Me.txtSandsSubstat3Value.TabIndex = 15
@@ -1684,6 +1758,7 @@ Partial Class Form1
         'txtSandsSubstat2Value
         '
         Me.txtSandsSubstat2Value.Location = New System.Drawing.Point(205, 120)
+        Me.txtSandsSubstat2Value.MaxLength = 4
         Me.txtSandsSubstat2Value.Name = "txtSandsSubstat2Value"
         Me.txtSandsSubstat2Value.Size = New System.Drawing.Size(88, 27)
         Me.txtSandsSubstat2Value.TabIndex = 14
@@ -1691,6 +1766,7 @@ Partial Class Form1
         'txtSandsSubstat1Value
         '
         Me.txtSandsSubstat1Value.Location = New System.Drawing.Point(205, 90)
+        Me.txtSandsSubstat1Value.MaxLength = 4
         Me.txtSandsSubstat1Value.Name = "txtSandsSubstat1Value"
         Me.txtSandsSubstat1Value.Size = New System.Drawing.Size(88, 27)
         Me.txtSandsSubstat1Value.TabIndex = 11
@@ -1747,6 +1823,16 @@ Partial Class Form1
         Me.grpGoblet.TabStop = False
         Me.grpGoblet.Text = "Goblet of Ecothem (*5)"
         '
+        'cmbGobletSet
+        '
+        Me.cmbGobletSet.FormattingEnabled = True
+        Me.cmbGobletSet.Items.AddRange(New Object() {"Archaic Petra", "Crimson Witch of Flames", "Emblem of Severed Fates", "Gladiator's Finale", "Shimenawa's Reminiscence", "Wanderer's Troupe", "Blizzard Strayer", "Bloodstained Chivalry"})
+        Me.cmbGobletSet.Location = New System.Drawing.Point(6, 24)
+        Me.cmbGobletSet.Name = "cmbGobletSet"
+        Me.cmbGobletSet.Size = New System.Drawing.Size(287, 28)
+        Me.cmbGobletSet.TabIndex = 19
+        Me.cmbGobletSet.Text = "  "
+        '
         'cmbGobletMainStatName
         '
         Me.cmbGobletMainStatName.FormattingEnabled = True
@@ -1759,6 +1845,7 @@ Partial Class Form1
         'txtGobletMainStatValue
         '
         Me.txtGobletMainStatValue.Location = New System.Drawing.Point(205, 61)
+        Me.txtGobletMainStatValue.MaxLength = 5
         Me.txtGobletMainStatValue.Name = "txtGobletMainStatValue"
         Me.txtGobletMainStatValue.Size = New System.Drawing.Size(88, 27)
         Me.txtGobletMainStatValue.TabIndex = 17
@@ -1766,6 +1853,7 @@ Partial Class Form1
         'txtGobletSubstat4Value
         '
         Me.txtGobletSubstat4Value.Location = New System.Drawing.Point(205, 180)
+        Me.txtGobletSubstat4Value.MaxLength = 4
         Me.txtGobletSubstat4Value.Name = "txtGobletSubstat4Value"
         Me.txtGobletSubstat4Value.Size = New System.Drawing.Size(88, 27)
         Me.txtGobletSubstat4Value.TabIndex = 16
@@ -1773,6 +1861,7 @@ Partial Class Form1
         'txtGobletSubstat3Value
         '
         Me.txtGobletSubstat3Value.Location = New System.Drawing.Point(205, 150)
+        Me.txtGobletSubstat3Value.MaxLength = 4
         Me.txtGobletSubstat3Value.Name = "txtGobletSubstat3Value"
         Me.txtGobletSubstat3Value.Size = New System.Drawing.Size(88, 27)
         Me.txtGobletSubstat3Value.TabIndex = 15
@@ -1780,6 +1869,7 @@ Partial Class Form1
         'txtGobletSubstat2Value
         '
         Me.txtGobletSubstat2Value.Location = New System.Drawing.Point(205, 120)
+        Me.txtGobletSubstat2Value.MaxLength = 4
         Me.txtGobletSubstat2Value.Name = "txtGobletSubstat2Value"
         Me.txtGobletSubstat2Value.Size = New System.Drawing.Size(88, 27)
         Me.txtGobletSubstat2Value.TabIndex = 14
@@ -1787,6 +1877,7 @@ Partial Class Form1
         'txtGobletSubstat1Value
         '
         Me.txtGobletSubstat1Value.Location = New System.Drawing.Point(205, 90)
+        Me.txtGobletSubstat1Value.MaxLength = 4
         Me.txtGobletSubstat1Value.Name = "txtGobletSubstat1Value"
         Me.txtGobletSubstat1Value.Size = New System.Drawing.Size(88, 27)
         Me.txtGobletSubstat1Value.TabIndex = 11
@@ -1843,6 +1934,16 @@ Partial Class Form1
         Me.grpCirclet.TabStop = False
         Me.grpCirclet.Text = "Circlet of Logos (*5)"
         '
+        'cmbCircletSet
+        '
+        Me.cmbCircletSet.FormattingEnabled = True
+        Me.cmbCircletSet.Items.AddRange(New Object() {"Archaic Petra", "Crimson Witch of Flames", "Emblem of Severed Fates", "Gladiator's Finale", "Shimenawa's Reminiscence", "Wanderer's Troupe", "Blizzard Strayer", "Bloodstained Chivalry"})
+        Me.cmbCircletSet.Location = New System.Drawing.Point(6, 24)
+        Me.cmbCircletSet.Name = "cmbCircletSet"
+        Me.cmbCircletSet.Size = New System.Drawing.Size(287, 28)
+        Me.cmbCircletSet.TabIndex = 19
+        Me.cmbCircletSet.Text = "  "
+        '
         'cmbCircletMainStatName
         '
         Me.cmbCircletMainStatName.FormattingEnabled = True
@@ -1854,6 +1955,7 @@ Partial Class Form1
         'txtCircletMainStatValue
         '
         Me.txtCircletMainStatValue.Location = New System.Drawing.Point(205, 61)
+        Me.txtCircletMainStatValue.MaxLength = 5
         Me.txtCircletMainStatValue.Name = "txtCircletMainStatValue"
         Me.txtCircletMainStatValue.Size = New System.Drawing.Size(88, 27)
         Me.txtCircletMainStatValue.TabIndex = 17
@@ -1861,6 +1963,7 @@ Partial Class Form1
         'txtCircletSubstat4Value
         '
         Me.txtCircletSubstat4Value.Location = New System.Drawing.Point(205, 180)
+        Me.txtCircletSubstat4Value.MaxLength = 4
         Me.txtCircletSubstat4Value.Name = "txtCircletSubstat4Value"
         Me.txtCircletSubstat4Value.Size = New System.Drawing.Size(88, 27)
         Me.txtCircletSubstat4Value.TabIndex = 16
@@ -1868,6 +1971,7 @@ Partial Class Form1
         'txtCircletSubstat3Value
         '
         Me.txtCircletSubstat3Value.Location = New System.Drawing.Point(205, 150)
+        Me.txtCircletSubstat3Value.MaxLength = 4
         Me.txtCircletSubstat3Value.Name = "txtCircletSubstat3Value"
         Me.txtCircletSubstat3Value.Size = New System.Drawing.Size(88, 27)
         Me.txtCircletSubstat3Value.TabIndex = 15
@@ -1875,6 +1979,7 @@ Partial Class Form1
         'txtCircletSubstat2Value
         '
         Me.txtCircletSubstat2Value.Location = New System.Drawing.Point(205, 120)
+        Me.txtCircletSubstat2Value.MaxLength = 4
         Me.txtCircletSubstat2Value.Name = "txtCircletSubstat2Value"
         Me.txtCircletSubstat2Value.Size = New System.Drawing.Size(88, 27)
         Me.txtCircletSubstat2Value.TabIndex = 14
@@ -1882,6 +1987,7 @@ Partial Class Form1
         'txtCircletSubstat1Value
         '
         Me.txtCircletSubstat1Value.Location = New System.Drawing.Point(205, 90)
+        Me.txtCircletSubstat1Value.MaxLength = 4
         Me.txtCircletSubstat1Value.Name = "txtCircletSubstat1Value"
         Me.txtCircletSubstat1Value.Size = New System.Drawing.Size(88, 27)
         Me.txtCircletSubstat1Value.TabIndex = 11
@@ -1920,6 +2026,10 @@ Partial Class Form1
         '
         'grpPlume
         '
+        Me.grpPlume.Controls.Add(Me.cmbPlumeSubstat4Name)
+        Me.grpPlume.Controls.Add(Me.cmbPlumeSubstat3Name)
+        Me.grpPlume.Controls.Add(Me.cmbPlumeSubstat2Name)
+        Me.grpPlume.Controls.Add(Me.cmbPlumeSubstat1Name)
         Me.grpPlume.Controls.Add(Me.cmbPlumeSet)
         Me.grpPlume.Controls.Add(Me.Label79)
         Me.grpPlume.Controls.Add(Me.txtPlumeATK)
@@ -1927,16 +2037,22 @@ Partial Class Form1
         Me.grpPlume.Controls.Add(Me.txtPlumeSubstat3Value)
         Me.grpPlume.Controls.Add(Me.txtPlumeSubstat2Value)
         Me.grpPlume.Controls.Add(Me.txtPlumeSubstat1Value)
-        Me.grpPlume.Controls.Add(Me.cmbPlumeSubstat2Name)
-        Me.grpPlume.Controls.Add(Me.cmbPlumeSubstat4Name)
-        Me.grpPlume.Controls.Add(Me.cmbPlumeSubstat3Name)
-        Me.grpPlume.Controls.Add(Me.cmbPlumeSubstat1Name)
         Me.grpPlume.Location = New System.Drawing.Point(422, 45)
         Me.grpPlume.Name = "grpPlume"
         Me.grpPlume.Size = New System.Drawing.Size(299, 216)
         Me.grpPlume.TabIndex = 2
         Me.grpPlume.TabStop = False
         Me.grpPlume.Text = "Plume of Death (*5)"
+        '
+        'cmbPlumeSet
+        '
+        Me.cmbPlumeSet.FormattingEnabled = True
+        Me.cmbPlumeSet.Items.AddRange(New Object() {"Archaic Petra", "Crimson Witch of Flames", "Emblem of Severed Fates", "Gladiator's Finale", "Shimenawa's Reminiscence", "Wanderer's Troupe", "Blizzard Strayer", "Bloodstained Chivalry"})
+        Me.cmbPlumeSet.Location = New System.Drawing.Point(6, 23)
+        Me.cmbPlumeSet.Name = "cmbPlumeSet"
+        Me.cmbPlumeSet.Size = New System.Drawing.Size(287, 28)
+        Me.cmbPlumeSet.TabIndex = 18
+        Me.cmbPlumeSet.Text = "  "
         '
         'Label79
         '
@@ -1951,6 +2067,7 @@ Partial Class Form1
         'txtPlumeATK
         '
         Me.txtPlumeATK.Location = New System.Drawing.Point(205, 61)
+        Me.txtPlumeATK.MaxLength = 5
         Me.txtPlumeATK.Name = "txtPlumeATK"
         Me.txtPlumeATK.Size = New System.Drawing.Size(88, 27)
         Me.txtPlumeATK.TabIndex = 17
@@ -1958,6 +2075,7 @@ Partial Class Form1
         'txtPlumeSubstat4Value
         '
         Me.txtPlumeSubstat4Value.Location = New System.Drawing.Point(205, 180)
+        Me.txtPlumeSubstat4Value.MaxLength = 4
         Me.txtPlumeSubstat4Value.Name = "txtPlumeSubstat4Value"
         Me.txtPlumeSubstat4Value.Size = New System.Drawing.Size(88, 27)
         Me.txtPlumeSubstat4Value.TabIndex = 16
@@ -1965,6 +2083,7 @@ Partial Class Form1
         'txtPlumeSubstat3Value
         '
         Me.txtPlumeSubstat3Value.Location = New System.Drawing.Point(205, 150)
+        Me.txtPlumeSubstat3Value.MaxLength = 4
         Me.txtPlumeSubstat3Value.Name = "txtPlumeSubstat3Value"
         Me.txtPlumeSubstat3Value.Size = New System.Drawing.Size(88, 27)
         Me.txtPlumeSubstat3Value.TabIndex = 15
@@ -1972,6 +2091,7 @@ Partial Class Form1
         'txtPlumeSubstat2Value
         '
         Me.txtPlumeSubstat2Value.Location = New System.Drawing.Point(205, 120)
+        Me.txtPlumeSubstat2Value.MaxLength = 4
         Me.txtPlumeSubstat2Value.Name = "txtPlumeSubstat2Value"
         Me.txtPlumeSubstat2Value.Size = New System.Drawing.Size(88, 27)
         Me.txtPlumeSubstat2Value.TabIndex = 14
@@ -1979,41 +2099,10 @@ Partial Class Form1
         'txtPlumeSubstat1Value
         '
         Me.txtPlumeSubstat1Value.Location = New System.Drawing.Point(205, 90)
+        Me.txtPlumeSubstat1Value.MaxLength = 4
         Me.txtPlumeSubstat1Value.Name = "txtPlumeSubstat1Value"
         Me.txtPlumeSubstat1Value.Size = New System.Drawing.Size(88, 27)
         Me.txtPlumeSubstat1Value.TabIndex = 11
-        '
-        'cmbPlumeSubstat2Name
-        '
-        Me.cmbPlumeSubstat2Name.FormattingEnabled = True
-        Me.cmbPlumeSubstat2Name.Location = New System.Drawing.Point(6, 118)
-        Me.cmbPlumeSubstat2Name.Name = "cmbPlumeSubstat2Name"
-        Me.cmbPlumeSubstat2Name.Size = New System.Drawing.Size(193, 28)
-        Me.cmbPlumeSubstat2Name.TabIndex = 13
-        '
-        'cmbPlumeSubstat4Name
-        '
-        Me.cmbPlumeSubstat4Name.FormattingEnabled = True
-        Me.cmbPlumeSubstat4Name.Location = New System.Drawing.Point(6, 178)
-        Me.cmbPlumeSubstat4Name.Name = "cmbPlumeSubstat4Name"
-        Me.cmbPlumeSubstat4Name.Size = New System.Drawing.Size(193, 28)
-        Me.cmbPlumeSubstat4Name.TabIndex = 12
-        '
-        'cmbPlumeSubstat3Name
-        '
-        Me.cmbPlumeSubstat3Name.FormattingEnabled = True
-        Me.cmbPlumeSubstat3Name.Location = New System.Drawing.Point(6, 148)
-        Me.cmbPlumeSubstat3Name.Name = "cmbPlumeSubstat3Name"
-        Me.cmbPlumeSubstat3Name.Size = New System.Drawing.Size(193, 28)
-        Me.cmbPlumeSubstat3Name.TabIndex = 10
-        '
-        'cmbPlumeSubstat1Name
-        '
-        Me.cmbPlumeSubstat1Name.FormattingEnabled = True
-        Me.cmbPlumeSubstat1Name.Location = New System.Drawing.Point(6, 88)
-        Me.cmbPlumeSubstat1Name.Name = "cmbPlumeSubstat1Name"
-        Me.cmbPlumeSubstat1Name.Size = New System.Drawing.Size(193, 28)
-        Me.cmbPlumeSubstat1Name.TabIndex = 9
         '
         'grpDatabase
         '
@@ -2031,7 +2120,7 @@ Partial Class Form1
         Me.grpDatabase.Controls.Add(Me.btnSave)
         Me.grpDatabase.Controls.Add(Me.TableDataGridView)
         Me.grpDatabase.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.grpDatabase.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.grpDatabase.ForeColor = System.Drawing.SystemColors.ControlText
         Me.grpDatabase.Location = New System.Drawing.Point(290, 28)
         Me.grpDatabase.Name = "grpDatabase"
         Me.grpDatabase.Size = New System.Drawing.Size(1179, 615)
@@ -2043,7 +2132,8 @@ Partial Class Form1
         'btnPrevious
         '
         Me.btnPrevious.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnPrevious.Location = New System.Drawing.Point(93, 318)
+        Me.btnPrevious.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnPrevious.Location = New System.Drawing.Point(60, 275)
         Me.btnPrevious.Name = "btnPrevious"
         Me.btnPrevious.Size = New System.Drawing.Size(118, 36)
         Me.btnPrevious.TabIndex = 50
@@ -2053,7 +2143,8 @@ Partial Class Form1
         'btnNext
         '
         Me.btnNext.BackColor = System.Drawing.Color.RoyalBlue
-        Me.btnNext.Location = New System.Drawing.Point(93, 269)
+        Me.btnNext.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnNext.Location = New System.Drawing.Point(334, 275)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(118, 36)
         Me.btnNext.TabIndex = 49
@@ -2063,9 +2154,10 @@ Partial Class Form1
         'btnAdd
         '
         Me.btnAdd.BackColor = System.Drawing.Color.ForestGreen
-        Me.btnAdd.Location = New System.Drawing.Point(304, 316)
+        Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAdd.Location = New System.Drawing.Point(199, 322)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(118, 31)
+        Me.btnAdd.Size = New System.Drawing.Size(118, 38)
         Me.btnAdd.TabIndex = 41
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = False
@@ -2075,7 +2167,7 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(89, 194)
+        Me.Label6.Location = New System.Drawing.Point(63, 194)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(124, 19)
         Me.Label6.TabIndex = 48
@@ -2086,7 +2178,7 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(89, 129)
+        Me.Label4.Location = New System.Drawing.Point(63, 129)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(119, 19)
         Me.Label4.TabIndex = 47
@@ -2097,7 +2189,7 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(89, 70)
+        Me.Label3.Location = New System.Drawing.Point(63, 70)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 19)
         Me.Label3.TabIndex = 46
@@ -2107,45 +2199,47 @@ Partial Class Form1
         '
         Me.TextBox3.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TableBindingSource1, "Email Address ", True))
-        Me.TextBox3.Location = New System.Drawing.Point(224, 186)
+        Me.TextBox3.Location = New System.Drawing.Point(198, 186)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(198, 27)
+        Me.TextBox3.Size = New System.Drawing.Size(253, 27)
         Me.TextBox3.TabIndex = 45
         '
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TableBindingSource1, "Genshin Main", True))
-        Me.TextBox2.Location = New System.Drawing.Point(224, 122)
+        Me.TextBox2.Location = New System.Drawing.Point(198, 122)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(198, 27)
+        Me.TextBox2.Size = New System.Drawing.Size(253, 27)
         Me.TextBox2.TabIndex = 44
         '
         'txtUID
         '
         Me.txtUID.BackColor = System.Drawing.SystemColors.ControlDark
         Me.txtUID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TableBindingSource1, "UID", True))
-        Me.txtUID.Location = New System.Drawing.Point(224, 62)
+        Me.txtUID.Location = New System.Drawing.Point(198, 62)
         Me.txtUID.Name = "txtUID"
-        Me.txtUID.Size = New System.Drawing.Size(198, 27)
+        Me.txtUID.Size = New System.Drawing.Size(253, 27)
         Me.txtUID.TabIndex = 43
         '
         'btnDelete
         '
-        Me.btnDelete.BackColor = System.Drawing.Color.MediumVioletRed
-        Me.btnDelete.Location = New System.Drawing.Point(304, 367)
+        Me.btnDelete.BackColor = System.Drawing.Color.Crimson
+        Me.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnDelete.Location = New System.Drawing.Point(333, 323)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(118, 33)
+        Me.btnDelete.Size = New System.Drawing.Size(118, 36)
         Me.btnDelete.TabIndex = 42
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
         'btnSave
         '
-        Me.btnSave.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.btnSave.Location = New System.Drawing.Point(304, 269)
+        Me.btnSave.BackColor = System.Drawing.Color.BlueViolet
+        Me.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnSave.Location = New System.Drawing.Point(59, 323)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(118, 33)
+        Me.btnSave.Size = New System.Drawing.Size(118, 36)
         Me.btnSave.TabIndex = 41
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = False
@@ -2390,72 +2484,41 @@ Partial Class Form1
         Me.TableAdapterManager1.TableTableAdapter = Me.TableTableAdapter1
         Me.TableAdapterManager1.UpdateOrder = GenshinStatsCalculator.Database1DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'cmbPlumeSet
+        'cmbPlumeSubstat1Name
         '
-        Me.cmbPlumeSet.FormattingEnabled = True
-        Me.cmbPlumeSet.Items.AddRange(New Object() {"Archaic Petra", "Crimson Witch of Flames", "Emblem of Severed Fates", "Gladiator's Finale", "Shimenawa's Reminiscence", "Wanderer's Troupe", "Blizzard Strayer", "Bloodstained Chivalry"})
-        Me.cmbPlumeSet.Location = New System.Drawing.Point(6, 23)
-        Me.cmbPlumeSet.Name = "cmbPlumeSet"
-        Me.cmbPlumeSet.Size = New System.Drawing.Size(287, 28)
-        Me.cmbPlumeSet.TabIndex = 18
-        Me.cmbPlumeSet.Text = "  "
+        Me.cmbPlumeSubstat1Name.FormattingEnabled = True
+        Me.cmbPlumeSubstat1Name.Items.AddRange(New Object() {"HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Elemental Mastery", "Energy Recharge"})
+        Me.cmbPlumeSubstat1Name.Location = New System.Drawing.Point(6, 88)
+        Me.cmbPlumeSubstat1Name.Name = "cmbPlumeSubstat1Name"
+        Me.cmbPlumeSubstat1Name.Size = New System.Drawing.Size(193, 28)
+        Me.cmbPlumeSubstat1Name.TabIndex = 21
         '
-        'cmbSandsSet
+        'cmbPlumeSubstat2Name
         '
-        Me.cmbSandsSet.FormattingEnabled = True
-        Me.cmbSandsSet.Items.AddRange(New Object() {"Archaic Petra", "Crimson Witch of Flames", "Emblem of Severed Fates", "Gladiator's Finale", "Shimenawa's Reminiscence", "Wanderer's Troupe", "Blizzard Strayer", "Bloodstained Chivalry"})
-        Me.cmbSandsSet.Location = New System.Drawing.Point(6, 23)
-        Me.cmbSandsSet.Name = "cmbSandsSet"
-        Me.cmbSandsSet.Size = New System.Drawing.Size(287, 28)
-        Me.cmbSandsSet.TabIndex = 19
-        Me.cmbSandsSet.Text = "  "
+        Me.cmbPlumeSubstat2Name.FormattingEnabled = True
+        Me.cmbPlumeSubstat2Name.Items.AddRange(New Object() {"HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Elemental Mastery", "Energy Recharge"})
+        Me.cmbPlumeSubstat2Name.Location = New System.Drawing.Point(6, 118)
+        Me.cmbPlumeSubstat2Name.Name = "cmbPlumeSubstat2Name"
+        Me.cmbPlumeSubstat2Name.Size = New System.Drawing.Size(193, 28)
+        Me.cmbPlumeSubstat2Name.TabIndex = 22
         '
-        'cmbGobletSet
+        'cmbPlumeSubstat3Name
         '
-        Me.cmbGobletSet.FormattingEnabled = True
-        Me.cmbGobletSet.Items.AddRange(New Object() {"Archaic Petra", "Crimson Witch of Flames", "Emblem of Severed Fates", "Gladiator's Finale", "Shimenawa's Reminiscence", "Wanderer's Troupe", "Blizzard Strayer", "Bloodstained Chivalry"})
-        Me.cmbGobletSet.Location = New System.Drawing.Point(6, 24)
-        Me.cmbGobletSet.Name = "cmbGobletSet"
-        Me.cmbGobletSet.Size = New System.Drawing.Size(287, 28)
-        Me.cmbGobletSet.TabIndex = 19
-        Me.cmbGobletSet.Text = "  "
+        Me.cmbPlumeSubstat3Name.FormattingEnabled = True
+        Me.cmbPlumeSubstat3Name.Items.AddRange(New Object() {"HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Elemental Mastery", "Energy Recharge"})
+        Me.cmbPlumeSubstat3Name.Location = New System.Drawing.Point(6, 150)
+        Me.cmbPlumeSubstat3Name.Name = "cmbPlumeSubstat3Name"
+        Me.cmbPlumeSubstat3Name.Size = New System.Drawing.Size(193, 28)
+        Me.cmbPlumeSubstat3Name.TabIndex = 23
         '
-        'cmbCircletSet
+        'cmbPlumeSubstat4Name
         '
-        Me.cmbCircletSet.FormattingEnabled = True
-        Me.cmbCircletSet.Items.AddRange(New Object() {"Archaic Petra", "Crimson Witch of Flames", "Emblem of Severed Fates", "Gladiator's Finale", "Shimenawa's Reminiscence", "Wanderer's Troupe", "Blizzard Strayer", "Bloodstained Chivalry"})
-        Me.cmbCircletSet.Location = New System.Drawing.Point(6, 24)
-        Me.cmbCircletSet.Name = "cmbCircletSet"
-        Me.cmbCircletSet.Size = New System.Drawing.Size(287, 28)
-        Me.cmbCircletSet.TabIndex = 19
-        Me.cmbCircletSet.Text = "  "
-        '
-        'cmbFlowerSubstat2Name
-        '
-        Me.cmbFlowerSubstat2Name.FormattingEnabled = True
-        Me.cmbFlowerSubstat2Name.Items.AddRange(New Object() {"HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Elemental Mastery", "Energy Recharge"})
-        Me.cmbFlowerSubstat2Name.Location = New System.Drawing.Point(6, 120)
-        Me.cmbFlowerSubstat2Name.Name = "cmbFlowerSubstat2Name"
-        Me.cmbFlowerSubstat2Name.Size = New System.Drawing.Size(193, 28)
-        Me.cmbFlowerSubstat2Name.TabIndex = 18
-        '
-        'cmbFlowerSubstat3Name
-        '
-        Me.cmbFlowerSubstat3Name.FormattingEnabled = True
-        Me.cmbFlowerSubstat3Name.Items.AddRange(New Object() {"HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Elemental Mastery", "Energy Recharge"})
-        Me.cmbFlowerSubstat3Name.Location = New System.Drawing.Point(6, 150)
-        Me.cmbFlowerSubstat3Name.Name = "cmbFlowerSubstat3Name"
-        Me.cmbFlowerSubstat3Name.Size = New System.Drawing.Size(193, 28)
-        Me.cmbFlowerSubstat3Name.TabIndex = 19
-        '
-        'cmbFlowerSubstat4Name
-        '
-        Me.cmbFlowerSubstat4Name.FormattingEnabled = True
-        Me.cmbFlowerSubstat4Name.Items.AddRange(New Object() {"HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Elemental Mastery", "Energy Recharge"})
-        Me.cmbFlowerSubstat4Name.Location = New System.Drawing.Point(6, 180)
-        Me.cmbFlowerSubstat4Name.Name = "cmbFlowerSubstat4Name"
-        Me.cmbFlowerSubstat4Name.Size = New System.Drawing.Size(193, 28)
-        Me.cmbFlowerSubstat4Name.TabIndex = 20
+        Me.cmbPlumeSubstat4Name.FormattingEnabled = True
+        Me.cmbPlumeSubstat4Name.Items.AddRange(New Object() {"HP%", "ATK", "ATK%", "DEF", "DEF%", "CRIT Rate", "CRIT DMG", "Elemental Mastery", "Energy Recharge"})
+        Me.cmbPlumeSubstat4Name.Location = New System.Drawing.Point(6, 180)
+        Me.cmbPlumeSubstat4Name.Name = "cmbPlumeSubstat4Name"
+        Me.cmbPlumeSubstat4Name.Size = New System.Drawing.Size(193, 28)
+        Me.cmbPlumeSubstat4Name.TabIndex = 24
         '
         'Form1
         '
@@ -2492,11 +2555,11 @@ Partial Class Form1
         Me.Controls.Add(Me.chkDisplayPresets)
         Me.Controls.Add(Me.grpPresetBuilds)
         Me.Controls.Add(Me.grpModeSelector)
-        Me.Controls.Add(Me.grpWeaponStats)
-        Me.Controls.Add(Me.grpDatabase)
         Me.Controls.Add(Me.grpPreviewStats)
         Me.Controls.Add(Me.grpCharStats)
         Me.Controls.Add(Me.grpArtifactStats)
+        Me.Controls.Add(Me.grpWeaponStats)
+        Me.Controls.Add(Me.grpDatabase)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
@@ -2734,10 +2797,6 @@ Partial Class Form1
     Friend WithEvents txtPlumeSubstat3Value As TextBox
     Friend WithEvents txtPlumeSubstat2Value As TextBox
     Friend WithEvents txtPlumeSubstat1Value As TextBox
-    Friend WithEvents cmbPlumeSubstat2Name As ComboBox
-    Friend WithEvents cmbPlumeSubstat4Name As ComboBox
-    Friend WithEvents cmbPlumeSubstat3Name As ComboBox
-    Friend WithEvents cmbPlumeSubstat1Name As ComboBox
     Friend WithEvents grpDatabase As GroupBox
     Friend WithEvents picHuTao As PictureBox
     Friend WithEvents picAyato As PictureBox
@@ -2782,4 +2841,8 @@ Partial Class Form1
     Friend WithEvents cmbFlowerSubstat4Name As ComboBox
     Friend WithEvents cmbFlowerSubstat3Name As ComboBox
     Friend WithEvents cmbFlowerSubstat2Name As ComboBox
+    Friend WithEvents cmbPlumeSubstat4Name As ComboBox
+    Friend WithEvents cmbPlumeSubstat3Name As ComboBox
+    Friend WithEvents cmbPlumeSubstat2Name As ComboBox
+    Friend WithEvents cmbPlumeSubstat1Name As ComboBox
 End Class
