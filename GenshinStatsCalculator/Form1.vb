@@ -35,7 +35,8 @@ Public Class Form1
     End Sub
     'Music Sub
     Sub PlayBackgroundMusic()
-        'My.Computer.Audio.Play("Yu Peng Chen - Reminisence-notloud.wav", AudioPlayMode.BackgroundLoop)
+        'Wala pa music lol
+        'My.Computer.Audio.Play("Yu Peng Chen - Reminisence.wav", AudioPlayMode.BackgroundLoop)
     End Sub
     'This sub allows us to create a mute button
     Private Sub chkMuteMusic_CheckedChanged(sender As Object, e As EventArgs) Handles chkMuteMusic.CheckedChanged
@@ -64,11 +65,11 @@ Public Class Form1
         grpArtifactStats.Hide()
         grpPreviewStats.Hide()
         grpDatabase.Hide()
-        picCharacter.Hide() 'hide the character portrait
+        picPSCharacter.Hide() 'hide the character portrait
 
         If radCharacterStats.Checked = True Then
             grpCharStats.Show()
-            picCharacter.Show() 'show the character portrait
+            picPSCharacter.Show() 'show the character portrait
 
         ElseIf radWeaponStats.Checked = True Then
             grpWeaponStats.Show()
@@ -78,7 +79,7 @@ Public Class Form1
 
         ElseIf radPreviewStats.Checked = True Then
             grpPreviewStats.Show()
-            picCharacter.Show() 'show the character portrait
+            picPSCharacter.Show() 'show the character portrait
 
             Call CalculateStats()
 
@@ -140,44 +141,54 @@ Public Class Form1
         strCharName = Convert.ToString(lstCharacters.SelectedItem)
         Select Case strCharName
             Case "Albedo"
-                picCharacter.Image = picAlbedo.Image
+                picCSCharacter.Image = picAlbedo.Image
+                picPSCharacter.Image = picAlbedo.Image
                 strNativeName = ""
                 strWeaponType = "Sword"
             Case "Hu Tao"
                 'grpCharStats.BackColor = Color.LightCoral 'nagpapalit ng kulay kaso kapanget hahaha kaya wag na
-                picCharacter.Image = picHuTao.Image
+                picCSCharacter.Image = picHuTao.Image
+                picPSCharacter.Image = picHuTao.Image
                 strNativeName = "胡桃"
                 strWeaponType = "Polearm"
             Case "Kaedehara Kazuha"
-                picCharacter.Image = picKazuha.Image
+                picCSCharacter.Image = picKazuha.Image
+                picPSCharacter.Image = picKazuha.Image
                 strNativeName = "楓原万葉"
                 strWeaponType = "Sword"
             Case "Kamisato Ayaka"
-                picCharacter.Image = picAyaka.Image
+                picCSCharacter.Image = picAyaka.Image
+                picPSCharacter.Image = picAyaka.Image
                 strNativeName = "神里綾華"
                 strWeaponType = "Sword"
             Case "Kamisato Ayato"
-                picCharacter.Image = picAyato.Image
+                picCSCharacter.Image = picAyato.Image
+                picPSCharacter.Image = picAyato.Image
                 strNativeName = "神里綾人"
                 strWeaponType = "Sword"
             Case "Eula"
-                picCharacter.Image = picEula.Image
+                picCSCharacter.Image = picEula.Image
+                picPSCharacter.Image = picEula.Image
                 strNativeName = ""
                 strWeaponType = "Greatsword"
             Case "Xiao"
-                picCharacter.Image = picXiao.Image
+                picCSCharacter.Image = picXiao.Image
+                picPSCharacter.Image = picXiao.Image
                 strNativeName = "魈"
                 strWeaponType = "Polearm"
             Case "Sangonomiya Kokomi"
-                picCharacter.Image = picKokomi.Image
+                picCSCharacter.Image = picKokomi.Image
+                picPSCharacter.Image = picKokomi.Image
                 strNativeName = "珊瑚宮心海"
                 strWeaponType = "Catalyst"
             Case "Yae Miko"
-                picCharacter.Image = picYae.Image
+                picCSCharacter.Image = picYae.Image
+                picPSCharacter.Image = picYae.Image
                 strNativeName = "八重神子"
                 strWeaponType = "Catalyst"
             Case "Zhongli"
-                picCharacter.Image = picZhongli.Image
+                picCSCharacter.Image = picZhongli.Image
+                picPSCharacter.Image = picZhongli.Image
                 strNativeName = "钟离"
                 strWeaponType = "Polearm"
         End Select
