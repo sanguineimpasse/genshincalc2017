@@ -23,14 +23,9 @@ Public Class Form1
     Dim strArtifactGoblet As String 'Goblet of Eonothem
     Dim strArtifactCirclet As String 'Circlet of Logos
 
-    Private Sub TableBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
-        Me.Validate()
-        Me.TableBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.Database1DataSet)
-
-    End Sub
     'Form_Load
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtUID.MaxLength = 9
         Call InitializeLists()
         Call PlayBackgroundMusic()
     End Sub
@@ -1498,6 +1493,42 @@ Public Class Form1
             msg = "This field will accept only numbers and decimal system."
             MessageBox.Show(msg, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Private Sub TableBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.TableBindingSource1.EndEdit()
+        Me.TableAdapterManager1.UpdateAll(Me.Database1DataSet1)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        TableBindingSource1.EndEdit()
+        Me.TableAdapterManager1.UpdateAll(Me.Database1DataSet1)
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        TableBindingSource1.AddNew()
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        TableBindingSource1.RemoveCurrent()
+    End Sub
+
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        TableBindingSource1.MoveNext()
+    End Sub
+
+    Private Sub btnPrevious_Click(sender As Object, e As EventArgs) Handles btnPrevious.Click
+        TableBindingSource1.MovePrevious()
+    End Sub
+
+    Private Sub txtUID_KeyPress(ByVal sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtUID.KeyPress
+
+        If (e.KeyChar < "0" OrElse e.KeyChar > "9") AndAlso
+                e.KeyChar <> ControlChars.Back Then
+            e.Handled = True
+        End If
+
     End Sub
 End Class
 

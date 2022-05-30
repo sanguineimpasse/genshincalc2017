@@ -26,3 +26,17 @@ C:\Users\Gene Feliciano\Source\Repos\genshincalc2017\GenshinStatsCalculator\obj\
 C:\Users\Gene Feliciano\Source\Repos\genshincalc2017\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.exe
 C:\Users\Gene Feliciano\Source\Repos\genshincalc2017\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.xml
 C:\Users\Gene Feliciano\Source\Repos\genshincalc2017\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.pdb
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.Form1.resources
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.Resources.resources
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.vbproj.GenerateResource.cache
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.vbproj.CoreCompileInputs.cache
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\bin\Debug\Database1.mdf
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\bin\Debug\Database1_log.ldf
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\bin\Debug\GenshinStatsCalculator.exe.config
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\bin\Debug\GenshinStatsCalculator.exe
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\bin\Debug\GenshinStatsCalculator.pdb
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\bin\Debug\GenshinStatsCalculator.xml
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.exe
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.xml
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.pdb
+C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.vbprojAssemblyReference.cache

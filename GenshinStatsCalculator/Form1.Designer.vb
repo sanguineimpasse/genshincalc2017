@@ -24,10 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.Database1DataSet = New GenshinStatsCalculator.Database1DataSet()
-        Me.TableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TableTableAdapter = New GenshinStatsCalculator.Database1DataSetTableAdapters.TableTableAdapter()
-        Me.TableAdapterManager = New GenshinStatsCalculator.Database1DataSetTableAdapters.TableAdapterManager()
         Me.Database1DataSet1 = New GenshinStatsCalculator.Database1DataSet1()
         Me.TableBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableTableAdapter1 = New GenshinStatsCalculator.Database1DataSet1TableAdapters.TableTableAdapter()
@@ -205,6 +201,17 @@ Partial Class Form1
         Me.cmbPlumeSubstat1Name = New System.Windows.Forms.ComboBox()
         Me.cmbPlumeSet = New System.Windows.Forms.ComboBox()
         Me.grpDatabase = New System.Windows.Forms.GroupBox()
+        Me.btnPrevious = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtUID = New System.Windows.Forms.TextBox()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.picHuTao = New System.Windows.Forms.PictureBox()
         Me.picAyato = New System.Windows.Forms.PictureBox()
         Me.picAyaka = New System.Windows.Forms.PictureBox()
@@ -228,8 +235,6 @@ Partial Class Form1
         Me.picWolfsGravestone = New System.Windows.Forms.PictureBox()
         Me.picPrimordialJWS = New System.Windows.Forms.PictureBox()
         Me.picKagurasVerity = New System.Windows.Forms.PictureBox()
-        CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TableBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TableDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -278,26 +283,6 @@ Partial Class Form1
         CType(Me.picKagurasVerity, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Database1DataSet
-        '
-        Me.Database1DataSet.DataSetName = "Database1DataSet"
-        Me.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TableBindingSource
-        '
-        Me.TableBindingSource.DataMember = "Table"
-        Me.TableBindingSource.DataSource = Me.Database1DataSet
-        '
-        'TableTableAdapter
-        '
-        Me.TableTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.TableTableAdapter = Me.TableTableAdapter
-        Me.TableAdapterManager.UpdateOrder = GenshinStatsCalculator.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'Database1DataSet1
         '
         Me.Database1DataSet1.DataSetName = "Database1DataSet1"
@@ -322,13 +307,14 @@ Partial Class Form1
         '
         Me.TableDataGridView.AutoGenerateColumns = False
         Me.TableDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.TableDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlDark
         Me.TableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TableDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.TableDataGridView.DataSource = Me.TableBindingSource1
-        Me.TableDataGridView.Location = New System.Drawing.Point(30, 35)
+        Me.TableDataGridView.Location = New System.Drawing.Point(515, 41)
         Me.TableDataGridView.Name = "TableDataGridView"
         Me.TableDataGridView.RowTemplate.Height = 24
-        Me.TableDataGridView.Size = New System.Drawing.Size(1127, 556)
+        Me.TableDataGridView.Size = New System.Drawing.Size(600, 531)
         Me.TableDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -351,6 +337,7 @@ Partial Class Form1
         '
         'grpModeSelector
         '
+        Me.grpModeSelector.BackColor = System.Drawing.Color.Transparent
         Me.grpModeSelector.Controls.Add(Me.radDatabase)
         Me.grpModeSelector.Controls.Add(Me.radPreviewStats)
         Me.grpModeSelector.Controls.Add(Me.radArtifactStats)
@@ -365,10 +352,11 @@ Partial Class Form1
         'radDatabase
         '
         Me.radDatabase.AutoSize = True
-        Me.radDatabase.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.radDatabase.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radDatabase.ForeColor = System.Drawing.Color.White
         Me.radDatabase.Location = New System.Drawing.Point(18, 146)
         Me.radDatabase.Name = "radDatabase"
-        Me.radDatabase.Size = New System.Drawing.Size(115, 24)
+        Me.radDatabase.Size = New System.Drawing.Size(135, 23)
         Me.radDatabase.TabIndex = 7
         Me.radDatabase.Text = "Personal Info"
         Me.radDatabase.UseVisualStyleBackColor = True
@@ -376,10 +364,11 @@ Partial Class Form1
         'radPreviewStats
         '
         Me.radPreviewStats.AutoSize = True
-        Me.radPreviewStats.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.radPreviewStats.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radPreviewStats.ForeColor = System.Drawing.Color.White
         Me.radPreviewStats.Location = New System.Drawing.Point(18, 116)
         Me.radPreviewStats.Name = "radPreviewStats"
-        Me.radPreviewStats.Size = New System.Drawing.Size(117, 24)
+        Me.radPreviewStats.Size = New System.Drawing.Size(137, 23)
         Me.radPreviewStats.TabIndex = 6
         Me.radPreviewStats.Text = "Preview Stats"
         Me.radPreviewStats.UseVisualStyleBackColor = True
@@ -387,10 +376,11 @@ Partial Class Form1
         'radArtifactStats
         '
         Me.radArtifactStats.AutoSize = True
-        Me.radArtifactStats.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.radArtifactStats.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radArtifactStats.ForeColor = System.Drawing.Color.White
         Me.radArtifactStats.Location = New System.Drawing.Point(18, 86)
         Me.radArtifactStats.Name = "radArtifactStats"
-        Me.radArtifactStats.Size = New System.Drawing.Size(145, 24)
+        Me.radArtifactStats.Size = New System.Drawing.Size(173, 23)
         Me.radArtifactStats.TabIndex = 5
         Me.radArtifactStats.Text = "Edit Artifact Stats"
         Me.radArtifactStats.UseVisualStyleBackColor = True
@@ -398,10 +388,11 @@ Partial Class Form1
         'radWeaponStats
         '
         Me.radWeaponStats.AutoSize = True
-        Me.radWeaponStats.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.radWeaponStats.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radWeaponStats.ForeColor = System.Drawing.Color.White
         Me.radWeaponStats.Location = New System.Drawing.Point(18, 57)
         Me.radWeaponStats.Name = "radWeaponStats"
-        Me.radWeaponStats.Size = New System.Drawing.Size(151, 24)
+        Me.radWeaponStats.Size = New System.Drawing.Size(173, 23)
         Me.radWeaponStats.TabIndex = 4
         Me.radWeaponStats.Text = "Edit Weapon Stats"
         Me.radWeaponStats.UseVisualStyleBackColor = True
@@ -410,10 +401,11 @@ Partial Class Form1
         '
         Me.radCharacterStats.AutoSize = True
         Me.radCharacterStats.Checked = True
-        Me.radCharacterStats.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.radCharacterStats.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radCharacterStats.ForeColor = System.Drawing.Color.White
         Me.radCharacterStats.Location = New System.Drawing.Point(18, 26)
         Me.radCharacterStats.Name = "radCharacterStats"
-        Me.radCharacterStats.Size = New System.Drawing.Size(159, 24)
+        Me.radCharacterStats.Size = New System.Drawing.Size(189, 23)
         Me.radCharacterStats.TabIndex = 3
         Me.radCharacterStats.TabStop = True
         Me.radCharacterStats.Text = "Edit Character Stats"
@@ -421,6 +413,7 @@ Partial Class Form1
         '
         'grpCharStats
         '
+        Me.grpCharStats.BackgroundImage = CType(resources.GetObject("grpCharStats.BackgroundImage"), System.Drawing.Image)
         Me.grpCharStats.Controls.Add(Me.lblCSLevel)
         Me.grpCharStats.Controls.Add(Me.Label5)
         Me.grpCharStats.Controls.Add(Me.lblCSCharName)
@@ -441,7 +434,9 @@ Partial Class Form1
         'lblCSLevel
         '
         Me.lblCSLevel.AutoSize = True
+        Me.lblCSLevel.BackColor = System.Drawing.Color.Transparent
         Me.lblCSLevel.Font = New System.Drawing.Font("SDK_JP_Web", 12.0!)
+        Me.lblCSLevel.ForeColor = System.Drawing.Color.White
         Me.lblCSLevel.Location = New System.Drawing.Point(532, 129)
         Me.lblCSLevel.Name = "lblCSLevel"
         Me.lblCSLevel.Size = New System.Drawing.Size(77, 24)
@@ -451,7 +446,9 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("SDK_JP_Web", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(467, 129)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(65, 24)
@@ -461,7 +458,9 @@ Partial Class Form1
         'lblCSCharName
         '
         Me.lblCSCharName.AutoSize = True
+        Me.lblCSCharName.BackColor = System.Drawing.Color.Transparent
         Me.lblCSCharName.Font = New System.Drawing.Font("SDK_JP_Web", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCSCharName.ForeColor = System.Drawing.Color.White
         Me.lblCSCharName.Location = New System.Drawing.Point(464, 84)
         Me.lblCSCharName.Name = "lblCSCharName"
         Me.lblCSCharName.Size = New System.Drawing.Size(194, 36)
@@ -471,7 +470,9 @@ Partial Class Form1
         'lblCSNativeName
         '
         Me.lblCSNativeName.AutoSize = True
+        Me.lblCSNativeName.BackColor = System.Drawing.Color.Transparent
         Me.lblCSNativeName.Font = New System.Drawing.Font("SDK_JP_Web", 12.0!)
+        Me.lblCSNativeName.ForeColor = System.Drawing.Color.White
         Me.lblCSNativeName.Location = New System.Drawing.Point(468, 51)
         Me.lblCSNativeName.Name = "lblCSNativeName"
         Me.lblCSNativeName.Size = New System.Drawing.Size(149, 24)
@@ -481,45 +482,54 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(896, 328)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 20)
+        Me.Label2.Size = New System.Drawing.Size(50, 19)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Level"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(895, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 20)
+        Me.Label1.Size = New System.Drawing.Size(88, 19)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Character"
         '
         'lstLevel
         '
+        Me.lstLevel.BackColor = System.Drawing.Color.SteelBlue
+        Me.lstLevel.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lstLevel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lstLevel.FormattingEnabled = True
         Me.lstLevel.ItemHeight = 20
         Me.lstLevel.Location = New System.Drawing.Point(899, 353)
         Me.lstLevel.Name = "lstLevel"
-        Me.lstLevel.Size = New System.Drawing.Size(244, 244)
+        Me.lstLevel.Size = New System.Drawing.Size(244, 240)
         Me.lstLevel.TabIndex = 7
         '
         'lstCharacters
         '
+        Me.lstCharacters.BackColor = System.Drawing.Color.SteelBlue
+        Me.lstCharacters.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lstCharacters.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lstCharacters.FormattingEnabled = True
         Me.lstCharacters.ItemHeight = 20
         Me.lstCharacters.Location = New System.Drawing.Point(899, 62)
         Me.lstCharacters.Name = "lstCharacters"
-        Me.lstCharacters.Size = New System.Drawing.Size(244, 244)
+        Me.lstCharacters.Size = New System.Drawing.Size(244, 240)
         Me.lstCharacters.TabIndex = 6
         '
         'grpCSBaseStats
         '
+        Me.grpCSBaseStats.BackColor = System.Drawing.Color.Transparent
         Me.grpCSBaseStats.Controls.Add(Me.lblCSDEF)
         Me.grpCSBaseStats.Controls.Add(Me.lblCSATK)
         Me.grpCSBaseStats.Controls.Add(Me.lblCSMaxHP)
@@ -527,6 +537,7 @@ Partial Class Form1
         Me.grpCSBaseStats.Controls.Add(Me.Label10)
         Me.grpCSBaseStats.Controls.Add(Me.Label9)
         Me.grpCSBaseStats.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!)
+        Me.grpCSBaseStats.ForeColor = System.Drawing.Color.White
         Me.grpCSBaseStats.Location = New System.Drawing.Point(458, 467)
         Me.grpCSBaseStats.Name = "grpCSBaseStats"
         Me.grpCSBaseStats.Size = New System.Drawing.Size(388, 130)
@@ -596,6 +607,7 @@ Partial Class Form1
         '
         'picCharacter
         '
+        Me.picCharacter.BackColor = System.Drawing.Color.White
         Me.picCharacter.Location = New System.Drawing.Point(320, 65)
         Me.picCharacter.Name = "picCharacter"
         Me.picCharacter.Size = New System.Drawing.Size(392, 558)
@@ -823,6 +835,7 @@ Partial Class Form1
         '
         'grpPresetBuilds
         '
+        Me.grpPresetBuilds.BackColor = System.Drawing.Color.Transparent
         Me.grpPresetBuilds.Controls.Add(Me.lstPresetList)
         Me.grpPresetBuilds.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.grpPresetBuilds.Location = New System.Drawing.Point(23, 373)
@@ -845,28 +858,31 @@ Partial Class Form1
         'chkDisplayPresets
         '
         Me.chkDisplayPresets.AutoSize = True
+        Me.chkDisplayPresets.BackColor = System.Drawing.Color.Transparent
         Me.chkDisplayPresets.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.chkDisplayPresets.Location = New System.Drawing.Point(33, 587)
         Me.chkDisplayPresets.Name = "chkDisplayPresets"
         Me.chkDisplayPresets.Size = New System.Drawing.Size(168, 24)
         Me.chkDisplayPresets.TabIndex = 8
         Me.chkDisplayPresets.Text = "Display Preset Builds"
-        Me.chkDisplayPresets.UseVisualStyleBackColor = True
+        Me.chkDisplayPresets.UseVisualStyleBackColor = False
         '
         'chkMuteMusic
         '
         Me.chkMuteMusic.AutoSize = True
+        Me.chkMuteMusic.BackColor = System.Drawing.Color.Transparent
         Me.chkMuteMusic.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.chkMuteMusic.Location = New System.Drawing.Point(33, 617)
         Me.chkMuteMusic.Name = "chkMuteMusic"
         Me.chkMuteMusic.Size = New System.Drawing.Size(107, 24)
         Me.chkMuteMusic.TabIndex = 9
         Me.chkMuteMusic.Text = "Mute Music"
-        Me.chkMuteMusic.UseVisualStyleBackColor = True
+        Me.chkMuteMusic.UseVisualStyleBackColor = False
         '
         'lblPresetCreator
         '
         Me.lblPresetCreator.AutoSize = True
+        Me.lblPresetCreator.BackColor = System.Drawing.Color.Transparent
         Me.lblPresetCreator.Font = New System.Drawing.Font("SDK_JP_Web", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPresetCreator.Location = New System.Drawing.Point(30, 534)
         Me.lblPresetCreator.Name = "lblPresetCreator"
@@ -877,6 +893,8 @@ Partial Class Form1
         '
         'grpPreviewStats
         '
+        Me.grpPreviewStats.BackColor = System.Drawing.Color.Transparent
+        Me.grpPreviewStats.BackgroundImage = CType(resources.GetObject("grpPreviewStats.BackgroundImage"), System.Drawing.Image)
         Me.grpPreviewStats.Controls.Add(Me.lblPSLevel)
         Me.grpPreviewStats.Controls.Add(Me.Label30)
         Me.grpPreviewStats.Controls.Add(Me.lblPSCharName)
@@ -884,6 +902,7 @@ Partial Class Form1
         Me.grpPreviewStats.Controls.Add(Me.grpPSAdvancedStats)
         Me.grpPreviewStats.Controls.Add(Me.grpElementalStats)
         Me.grpPreviewStats.Controls.Add(Me.grpPSBaseStats)
+        Me.grpPreviewStats.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.grpPreviewStats.Location = New System.Drawing.Point(290, 28)
         Me.grpPreviewStats.Name = "grpPreviewStats"
         Me.grpPreviewStats.Size = New System.Drawing.Size(1179, 615)
@@ -1452,6 +1471,7 @@ Partial Class Form1
         '
         'grpArtifactStats
         '
+        Me.grpArtifactStats.BackgroundImage = CType(resources.GetObject("grpArtifactStats.BackgroundImage"), System.Drawing.Image)
         Me.grpArtifactStats.Controls.Add(Me.btnClearArtifacts)
         Me.grpArtifactStats.Controls.Add(Me.lstArtifactBonuses)
         Me.grpArtifactStats.Controls.Add(Me.Label81)
@@ -1461,6 +1481,7 @@ Partial Class Form1
         Me.grpArtifactStats.Controls.Add(Me.grpCirclet)
         Me.grpArtifactStats.Controls.Add(Me.grpPlume)
         Me.grpArtifactStats.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.grpArtifactStats.ForeColor = System.Drawing.Color.White
         Me.grpArtifactStats.Location = New System.Drawing.Point(290, 28)
         Me.grpArtifactStats.Name = "grpArtifactStats"
         Me.grpArtifactStats.Size = New System.Drawing.Size(1179, 615)
@@ -2015,15 +2036,135 @@ Partial Class Form1
         '
         'grpDatabase
         '
+        Me.grpDatabase.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.grpDatabase.Controls.Add(Me.btnPrevious)
+        Me.grpDatabase.Controls.Add(Me.btnNext)
+        Me.grpDatabase.Controls.Add(Me.btnAdd)
+        Me.grpDatabase.Controls.Add(Me.Label6)
+        Me.grpDatabase.Controls.Add(Me.Label4)
+        Me.grpDatabase.Controls.Add(Me.Label3)
+        Me.grpDatabase.Controls.Add(Me.TextBox3)
+        Me.grpDatabase.Controls.Add(Me.TextBox2)
+        Me.grpDatabase.Controls.Add(Me.txtUID)
+        Me.grpDatabase.Controls.Add(Me.btnDelete)
+        Me.grpDatabase.Controls.Add(Me.btnSave)
         Me.grpDatabase.Controls.Add(Me.TableDataGridView)
         Me.grpDatabase.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.grpDatabase.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.grpDatabase.Location = New System.Drawing.Point(290, 28)
         Me.grpDatabase.Name = "grpDatabase"
-        Me.grpDatabase.Size = New System.Drawing.Size(1173, 615)
+        Me.grpDatabase.Size = New System.Drawing.Size(1179, 615)
         Me.grpDatabase.TabIndex = 16
         Me.grpDatabase.TabStop = False
         Me.grpDatabase.Text = "Personal Info"
         Me.grpDatabase.Visible = False
+        '
+        'btnPrevious
+        '
+        Me.btnPrevious.BackColor = System.Drawing.Color.Blue
+        Me.btnPrevious.Location = New System.Drawing.Point(114, 320)
+        Me.btnPrevious.Name = "btnPrevious"
+        Me.btnPrevious.Size = New System.Drawing.Size(118, 36)
+        Me.btnPrevious.TabIndex = 50
+        Me.btnPrevious.Text = "Previous"
+        Me.btnPrevious.UseVisualStyleBackColor = False
+        '
+        'btnNext
+        '
+        Me.btnNext.BackColor = System.Drawing.Color.Blue
+        Me.btnNext.Location = New System.Drawing.Point(114, 271)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(118, 36)
+        Me.btnNext.TabIndex = 49
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = False
+        '
+        'btnAdd
+        '
+        Me.btnAdd.BackColor = System.Drawing.Color.Gold
+        Me.btnAdd.Location = New System.Drawing.Point(284, 317)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(118, 31)
+        Me.btnAdd.TabIndex = 41
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(89, 194)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(124, 19)
+        Me.Label6.TabIndex = 48
+        Me.Label6.Text = "Email Address:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(89, 129)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(119, 19)
+        Me.Label4.TabIndex = 47
+        Me.Label4.Text = "Genshin Main:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("SDK_JP_Web", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(89, 70)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(44, 19)
+        Me.Label3.TabIndex = 46
+        Me.Label3.Text = "UID:"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TableBindingSource1, "Email Address ", True))
+        Me.TextBox3.Location = New System.Drawing.Point(224, 186)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(198, 27)
+        Me.TextBox3.TabIndex = 45
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TableBindingSource1, "Genshin Main", True))
+        Me.TextBox2.Location = New System.Drawing.Point(224, 122)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(198, 27)
+        Me.TextBox2.TabIndex = 44
+        '
+        'txtUID
+        '
+        Me.txtUID.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.txtUID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TableBindingSource1, "UID", True))
+        Me.txtUID.Location = New System.Drawing.Point(224, 62)
+        Me.txtUID.Name = "txtUID"
+        Me.txtUID.Size = New System.Drawing.Size(198, 27)
+        Me.txtUID.TabIndex = 43
+        '
+        'btnDelete
+        '
+        Me.btnDelete.BackColor = System.Drawing.Color.Red
+        Me.btnDelete.Location = New System.Drawing.Point(284, 364)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(118, 33)
+        Me.btnDelete.TabIndex = 42
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = False
+        '
+        'btnSave
+        '
+        Me.btnSave.BackColor = System.Drawing.Color.DarkCyan
+        Me.btnSave.Location = New System.Drawing.Point(284, 271)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(118, 33)
+        Me.btnSave.TabIndex = 41
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'picHuTao
         '
@@ -2259,6 +2400,8 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1497, 674)
         Me.Controls.Add(Me.picKagurasVerity)
         Me.Controls.Add(Me.picPrimordialJWS)
@@ -2288,17 +2431,15 @@ Partial Class Form1
         Me.Controls.Add(Me.chkDisplayPresets)
         Me.Controls.Add(Me.grpPresetBuilds)
         Me.Controls.Add(Me.grpModeSelector)
-        Me.Controls.Add(Me.picCharacter)
-        Me.Controls.Add(Me.grpPreviewStats)
-        Me.Controls.Add(Me.grpCharStats)
-        Me.Controls.Add(Me.grpDatabase)
         Me.Controls.Add(Me.grpArtifactStats)
         Me.Controls.Add(Me.grpWeaponStats)
+        Me.Controls.Add(Me.grpDatabase)
+        Me.Controls.Add(Me.grpPreviewStats)
+        Me.Controls.Add(Me.picCharacter)
+        Me.Controls.Add(Me.grpCharStats)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Genshin Stats Calculator"
-        CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TableBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TableDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2337,6 +2478,7 @@ Partial Class Form1
         Me.grpPlume.ResumeLayout(False)
         Me.grpPlume.PerformLayout()
         Me.grpDatabase.ResumeLayout(False)
+        Me.grpDatabase.PerformLayout()
         CType(Me.picHuTao, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picAyato, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picAyaka, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2365,10 +2507,6 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Database1DataSet As Database1DataSet
-    Friend WithEvents TableBindingSource As BindingSource
-    Friend WithEvents TableTableAdapter As Database1DataSetTableAdapters.TableTableAdapter
-    Friend WithEvents TableAdapterManager As Database1DataSetTableAdapters.TableAdapterManager
     Friend WithEvents Database1DataSet1 As Database1DataSet1
     Friend WithEvents TableBindingSource1 As BindingSource
     Friend WithEvents TableTableAdapter1 As Database1DataSet1TableAdapters.TableTableAdapter
@@ -2569,4 +2707,15 @@ Partial Class Form1
     Friend WithEvents picWolfsGravestone As PictureBox
     Friend WithEvents picPrimordialJWS As PictureBox
     Friend WithEvents picKagurasVerity As PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtUID As TextBox
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnSave As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnPrevious As Button
+    Friend WithEvents btnNext As Button
 End Class
