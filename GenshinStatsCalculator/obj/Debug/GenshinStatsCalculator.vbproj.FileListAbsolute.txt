@@ -40,3 +40,4 @@ C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj
 C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.xml
 C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.pdb
 C:\Users\Angel Juganas\Downloads\genshincalc2017-main\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.vbprojAssemblyReference.cache
+C:\Users\Gene Feliciano\Source\Repos\genshincalc2017\GenshinStatsCalculator\obj\Debug\GenshinStatsCalculator.SplashScreen.resources

@@ -31,12 +31,12 @@ Public Class Form1
     End Sub
     'Form_Closed
     Private Sub GICalcMainGUI_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        'SplashScreen.Close() 'Close the first Form
+        SplashScreen.Close() 'Close the first Form
     End Sub
     'Music Sub
     Sub PlayBackgroundMusic()
         'Wala pa music lol
-        'My.Computer.Audio.Play("Yu Peng Chen - Reminisence.wav", AudioPlayMode.BackgroundLoop)
+        My.Computer.Audio.Play("C:\Users\Gene Feliciano\Desktop\Yu Peng Chen - Mondstadt Starlit.wav", AudioPlayMode.BackgroundLoop)
     End Sub
     'This sub allows us to create a mute button
     Private Sub chkMuteMusic_CheckedChanged(sender As Object, e As EventArgs) Handles chkMuteMusic.CheckedChanged
@@ -1543,7 +1543,7 @@ Public Class Form1
     End Sub
 End Class
 
-'------------------------------------------------------------
+'-----------------------------------------------------------
 '          .-           .             .-. .-._.---'    .      
 '  .---;`-'            /   .--.    .-/ -'(_) /  .-.   /       
 ' (   (_) .  .-.  .-../   /    )`-'-/--     /--.`-'  /   .-.  
