@@ -2,4 +2,4 @@
 
 Project for our Year 1 finals :))
 
-(while also being a lesson in using git)
+(while also being practice in using git)
